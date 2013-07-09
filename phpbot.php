@@ -26,7 +26,7 @@ $config = array(
 				"versio"	=> "PHP Tsunku version 0.3.4 => http://pastebin.com/sLibCBQz",
 				"debug"		=> "false" #console debugging true/false
 				),
-	"opers" 	=> array("hrna", "jaska", "bogeyman") #operaattorit
+	"opers" 	=> array("oper1", "oper2", "etc...") #operaattorit
 	);
 
 echo "*                         *\r\n";
