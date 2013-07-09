@@ -36,6 +36,7 @@ echo "* ".$config["color"]["lred"].
 echo "*                         *\r\n";
 echo "***************************\r\n";
 /** BOT CFG ABOWE **/
+
 class tsunku {
 
 var $socket;
