@@ -17,7 +17,7 @@ $config = array(
 				"end"		=> "\033[0m"
 				),
 	"config" 	=> array(
-				"host"		=> "b0xi.eu",
+				"host"		=> "irc.server",
 				"port"		=> 6667,
 				"nick"		=> "TsunkuBeta", 
 				"ident"		=> "Tsunku2",
