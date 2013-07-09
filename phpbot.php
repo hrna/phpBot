@@ -24,7 +24,7 @@ $config = array(
 				"ident"		=> "Tsunku2",
 				"chan"		=> "#tsunku",
 				"realname"	=> "tsunku v2",
-				"versio"	=> "PHP Tsunku version 0.3.4 => http://pastebin.com/sLibCBQz",
+				"versio"	=> "PHP Tsunku version 0.3.4",
 				"debug"		=> "false" #console debugging true/false
 				),
 	"opers" 	=> array("oper1", "oper2", "etc...") #operaattorit
