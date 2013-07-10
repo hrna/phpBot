@@ -11,7 +11,7 @@ $config = array(
 				"end"		=> "\033[0m"
 				),
 	"config" 	=> array(
-				"host"		=> "irc.server",
+				"host"		=> "b0xi.eu",
 				"port"		=> 6667,
 				"nick"		=> "TsunkuBeta", 
 				"ident"		=> "Tsunku2",
@@ -20,7 +20,7 @@ $config = array(
 				"versio"	=> "PHP Tsunku version 0.3.4",
 				"debug"		=> "false" #console debugging true/false
 				),
-	"opers" 	=> array("oper1", "oper2", "etc...") #operaattorit
+	"opers" 	=> array("hrna", "oper2", "etc...") #operaattorit
 	);
 
 ?>
