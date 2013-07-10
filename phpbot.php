@@ -216,7 +216,7 @@ function valuutta($amount,$from,$to)
     	}
 
 #wikihakustringi
-function wiki($haku)
+/**function wiki($haku)
 	{
 		$string_num = count($haku);
 		$result = array();
@@ -230,7 +230,7 @@ function wiki($haku)
 		$result = implode("_",$result);
 		$result = "http://en.wikipedia.org/wiki/".ucfirst($result); #Eka kirjain isoksi
 		return $result;
-	}
+	}**/
 
 } #class end#
 
