@@ -64,16 +64,29 @@ function loop($config)
 	flush();
 	$this->expl = explode(" ", $line);
 	
-	if ($this->expl[1] == "433") #Hack - onko nick käytössä?
+	if ($this->expl[1] == "433") #onko nick käytössä? Vedellään niin kauan että löytyy sopiva nick... #Huonoa koodia?
 	{
-		$this->send_data("NICK ".$config["config"]["altnick"]); #Hack - alternative nick
-	}
-	if ($this->expl[1] == "376") { # Jos kaikki ok ja motd on loppu, joinitaan kanaville
+		$nick = $this->send_data("NICK ".$config["config"]["altnick"]);
+		if ($nick != "433")
+		{
 			foreach (explode(",", $config["config"]["chans"]) as $chan)
-			{
-				$this->send_data("JOIN", $chan);
+			{		
+				join_chan($chan);
 			}
-	}		
+		} else {
+			while ($nick == "433")
+			{
+				$nick = $this->send_data("NICK ".$config["config"]["nick"].rand(1,10));
+				sleep(1);
+			}
+			foreach (explode(",", $config["config"]["chans"]) as $chan)
+			{		
+				$this->join_channel($chan);
+			}
+		}
+	}
+
+		
 	
 	#vastaa palvelimen pingiin
 	if ($this->expl[0] == "PING")
@@ -153,6 +166,10 @@ function send_data($output, $msg = null)
 		{
 			fwrite($this->socket, $output."\r\n");
 			echo $output."\r\n";
+			$line = fgets($this->socket, 256);
+			$this->expl = explode(" ", $line);
+			return $this->expl[1];
+			
  		} else {
 			fwrite($this->socket, $output." ".$msg."\r\n");
 			echo $output." ".$msg."\r\n";
@@ -169,7 +186,7 @@ function send_chan($output)
 #liittyy kanavalle
 function join_channel($chan)
 	{
-		send_data("join", $chan);
+		$this->send_data("join", $chan);
 		echo "Joining ".$chan."\r\n";
 	}
 
