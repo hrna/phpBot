@@ -17,7 +17,13 @@ echo "*                         *\r\n";
 echo "***************************\r\n";
 /** BOT CFG ABOWE **/
 
-include("modules/wiki_module.php"); #TESTI
+#Ladataan moduulit, mitenhän tämän tekis?
+foreach ($config["modules"] as $mod)
+{
+	echo "Loading module: ".$mod;
+	include("modules/".$mod."_module.php");
+}
+
 
 class tsunku {
 
@@ -25,11 +31,10 @@ var $socket;
 var $expl = array();
 var $command;
 
-
 #luo yhteyden ja pitää toimintoja yllä
 function __construct($config)
 	{
-	echo $config["color"]["lblue"]."* ".$config["config"]["versio"].$config["color"]["end"]."\r\n";
+	echo "\r\n".$config["color"]["lblue"]."* ".$config["config"]["versio"].$config["color"]["end"]."\r\n";
 	echo "* Initializing the connection... *\r\n\r\n";
 	$this->socket = fsockopen($config["config"]["host"],$config["config"]["port"]);
 	$this->server_auth($config);
@@ -55,7 +60,7 @@ function get_nick($a)
 	$nick = strstr($nick, "!", true);
 	return $nick;
 	}
-
+	
 function loop($config)
 	{
 	
@@ -113,6 +118,7 @@ function loop($config)
 	if (isset($this->expl[3]))
 	{
 		$command = str_replace(array(chr(10), chr(13)), '', $this->expl[3]);
+	
 		switch($command)
 		{
 			case ":!cmd":
@@ -157,11 +163,12 @@ function loop($config)
 			case ":!wiki":
 				if ($this->expl[4])
 				{
-					$wiki = new wiki();
-					$this->send_chan($wiki->wiki($this->expl));
+					$this->send_chan(wiki($this->expl[4]));
 					break;
 				} else { $this->send_chan("Usage: !wiki MS Silja Europa"); break;}
+				
 		}
+		
 	}
 
 	#loopataan uusiksi

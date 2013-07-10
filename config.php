@@ -21,7 +21,8 @@ $config = array(
 				"versio"	=> "PHP Tsunku version 0.3.4",
 				"debug"		=> "true" #console debugging true/false
 				),
-	"opers" 	=> array("hrna", "jaska", "etc...") #operaattorit
+	"opers" 	=> array("hrna", "jaska", "etc..."), #operaattorit
+	"modules"	=> array("wiki")
 	);
 
 ?>
