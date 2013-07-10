@@ -115,25 +115,7 @@ function loop($config)
 	{
 		$command = str_replace(array(chr(10), chr(13)), '', $this->expl[3]);
 
-		if ($command[1] == "!") { $this->parse_command($command, $config); }
-		switch($command)
-		{
-
-			case ":!opme":
-				if (in_array($this->get_nick($line), $config["opers"]))
-				{
-					$this->send_data("MODE ".$this->expl[2]." +o ".$this->get_nick($line)."\r\n");
-					break;
-				} else { $this->send_chan($this->get_nick($line).", Ei taida sun natsat riittää :(\r\n"); }
-
-			/*case ":!op":
-				if (in_array($this->get_nick($line),$config["opers"]))
-				{
-					$this->send_data("MODE ".$this->expl[2]." +o ".$this->expl[4]."\r\n");
-					break;
-				} else { $this->send_chan($this->get_nick($line).", Ei taida sun natsat riittää :(\r\n"); }
-				*/
-		}
+		if ($command[1] == "!") { $this->parse_command($command, $config); } # suoritetaan komento
 		
 	}
 
@@ -179,7 +161,7 @@ function parse_command($command, $config)
 		$command = substr($command, 2);	
 		if (function_exists($command)) {
 			$pillu = ($command($this->expl, $config));
-			if (substr($pillu, 0, 4 ) === "MODE")
+			if (substr($pillu, 0, 4 ) === "MODE") ## jos server-komento
 			{
 				$this->send_data($pillu);
 			}else {
@@ -195,16 +177,6 @@ function parse_command($command, $config)
 } #class end#
 
 #käynnistää botin
-
 $tsunku = new tsunku($config);
-
-#hakee käyttäjän nickin
-function get_nick($a) 
-	{
-	//$exp = explode(" ", $a);
-	$nick = substr($a[0], 1, strpos($a[0], "!"));
-	$nick = strstr($nick, "!", true);
-	return $nick;
-	}
 
 ?>
