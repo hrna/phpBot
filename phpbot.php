@@ -71,7 +71,7 @@ function loop($config)
 		{
 			foreach (explode(",", $config["config"]["chans"]) as $chan)
 			{		
-				join_chan($chan);
+				$this->join_chan($chan);
 			}
 		} else {
 			while ($nick == "433")
