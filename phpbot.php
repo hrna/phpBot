@@ -169,7 +169,7 @@ function send_chan($output)
 #liittyy kanavalle
 function join_channel($chan)
 	{
-		send_data("join", $chan);
+		$this->send_data("join", $chan);
 		echo "Joining ".$chan."\r\n";
 	}
 
