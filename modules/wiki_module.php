@@ -1,7 +1,7 @@
 <?php
 function wiki($haku)
 		{
-		if ($haku[4] == "")
+		if (!isset($haku[4]))
 		{
 			return "Usage: !wiki MS Silja Europa";
 		} else {
@@ -9,9 +9,9 @@ function wiki($haku)
 			$result = array();
 			for ($i = 4; $i < $string_num; $i++)
 			{
-				if ($haku[$i] != "") 
+				if (isset($haku[$i])) 
 				{
-					$result[$i] .= $haku[$i]; #undefined offsetti, fixii tähä...
+					$result[$i] .= $haku[$i]; #PHP Notice:  Undefined offset: 4 on line 14, En keksi, sylkee silti :(
 				}
 			}				
 			$result = implode("_",$result);
