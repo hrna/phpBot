@@ -6,29 +6,8 @@ echo "*                         *\r\n";
 echo "* Loading the bot config. *\r\n";
 echo "*                         *\r\n";
 echo "***************************\r\n";
- 
-$config = array(
-	"color"		=> array(
-				"blue" 		=> "\033[0;34m",
-				"lblue"		=> "\033[1;34m",
-				"red"		=> "\033[0;31m",
-				"lred"		=> "\033[1;31m",
-				"green"		=> "\033[0;32m",
-				"lgreen"	=> "\033[1;32m",
-				"end"		=> "\033[0m"
-				),
-	"config" 	=> array(
-				"host"		=> "irc.server",
-				"port"		=> 6667,
-				"nick"		=> "TsunkuBeta", 
-				"ident"		=> "Tsunku2",
-				"chan"		=> "#tsunku",
-				"realname"	=> "tsunku v2",
-				"versio"	=> "PHP Tsunku version 0.3.4",
-				"debug"		=> "false" #console debugging true/false
-				),
-	"opers" 	=> array("oper1", "oper2", "etc...") #operaattorit
-	);
+
+include("config.php"); 
 
 echo "*                         *\r\n";
 echo "* ".$config["color"]["lred"].
