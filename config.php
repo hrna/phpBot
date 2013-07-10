@@ -22,7 +22,7 @@ $config = array(
 				"debug"		=> "true" #console debugging true/false
 				),
 	"opers" 	=> array("hrna", "jaska", "etc..."), #operaattorit
-	"modules"	=> array("wiki")
+	"modules"	=> array("wiki","kurssi")
 	);
 
 ?>

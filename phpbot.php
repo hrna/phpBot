@@ -33,7 +33,7 @@ function __construct($config)
 	$this->server_auth($config);
 	echo "* Sending AUTH to server. => Joining ".$config["color"]["lred"].$config["config"]["chan"].$config["color"]["end"]." *\r\n";
 	echo "=> Entering the mainloop =>\r\n";
-	$this->load_modules($config);
+	$this->load_modules($config); #Ladataan moduulit
 	$this->loop($config);
 	}
 
@@ -59,7 +59,7 @@ function load_modules($config)
 	{
 		foreach ($config["modules"] as $mod)
 		{
-			echo "Loading module: ".$mod;
+			echo "Loading module: ".$mod."\r\n";
 			include("modules/".$mod."_module.php");
 		}	
 	}
@@ -121,7 +121,8 @@ function loop($config)
 	if (isset($this->expl[3]))
 	{
 		$command = str_replace(array(chr(10), chr(13)), '', $this->expl[3]);
-	
+
+		if ($command[1] == "!") { $this->parse_command($command); }
 		switch($command)
 		{
 			case ":!cmd":
@@ -149,7 +150,7 @@ function loop($config)
 					$this->send_data("MODE ".$this->expl[2]." +o ".$this->expl[4]."\r\n");
 					break;
 				} else { $this->send_chan($this->get_nick($line).", Ei taida sun natsat riittää :(\r\n"); }
-			case ":!g":
+			/*case ":!g":
 				if (is_numeric($this->expl[4]))
 				{				
 					$from = str_replace(array(chr(10), chr(13)), '', $this->expl[5]);
@@ -162,14 +163,14 @@ function loop($config)
 				} else { $this->send_chan("Usage: !g <amount> <from(eur)> <to(usd)>"); break; }
 			case ":!credits":
 				$this->send_chan("Code by hrna, google script by jaska.");
-				break;
-			case ":!wiki":
+				break;*/
+			/*case ":!wiki":
 				if ($this->expl[4])
 				{
 					$this->send_chan(wiki($this->expl));
 					break;
 				} else { $this->send_chan("Usage: !wiki MS Silja Europa"); break;}
-			
+			*/
 				
 		}
 		
@@ -211,6 +212,16 @@ function join_channel($chan)
 		echo "Joining ".$chan."\r\n";
 	}
 
+#Suoritetaan toiminto jos olemassa
+function parse_command($command) 
+	{
+		$command = substr($command, 2);	
+		if (function_exists($command)) {
+			$this->send_chan($command($this->expl));		
+		} else {
+    		$this->send_chan("Tuntematon komento: !".$command);
+		}
+	}
 #googlevaluutta By Jaska
 function valuutta($amount,$from,$to)
 	{
@@ -225,23 +236,6 @@ function valuutta($amount,$from,$to)
 		return $result;
 		}
     	}
-
-#wikihakustringi
-/*function wiki($haku)
-	{
-		$string_num = count($haku);
-		$result = array();
-		for ($i = 4; $i < $string_num; $i++)
-		{
-			if ($haku[$i] != "") 
-			{
-				$result[$i] .= $haku[$i]; #undefined offsetti, fixii tähä...
-			}
-		}				
-		$result = implode("_",$result);
-		$result = "http://en.wikipedia.org/wiki/".ucfirst($result); #Eka kirjain isoksi
-		return $result;
-	}*/
 
 } #class end#
 
