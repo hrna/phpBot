@@ -70,8 +70,7 @@ function loop($config)
 		$this->send_data("NICK ".$config["config"]["altnick"]); #Hack - alternative nick
 	}
 	if ($this->expl[1] == "376") { # Jos kaikki ok ja motd on loppu, joinitaan kanaville
-		$chans = explode(",", $config["config"]["chans"]);
-			foreach ($chans as $chan)
+			foreach (explode(",", $config["config"]["chans"]) as $chan)
 			{
 				$this->send_data("JOIN", $chan);
 			}
