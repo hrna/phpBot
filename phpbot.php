@@ -71,7 +71,7 @@ function loop($config)
 	if ($this->expl[1] == "376") { # Jos kaikki ok ja motd on loppu, joinitaan kanaville
 			foreach (explode(",", $config["config"]["chans"]) as $chan)
 			{
-				$this->join_channel$chan);
+				$this->join_channel($chan);
 			}
 	}		
 	
