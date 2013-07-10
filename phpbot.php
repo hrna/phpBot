@@ -46,14 +46,7 @@ function server_auth($config)
 	echo $config["color"]["lgreen"]."* AUTH OK *\r\n\r\n".$config["color"]["end"];
 	}
 	
-#hakee käyttäjän nickin
-function get_nick($a) 
-	{
-	//$exp = explode(" ", $a);
-	$nick = substr($a[0], 1, strpos($a[0], "!"));
-	$nick = strstr($nick, "!", true);
-	return $nick;
-	}
+
 #Ladataan moduulit, mitenhän tämän tekis?
 function load_modules($config)
 	{
@@ -210,5 +203,14 @@ function valuutta($amount,$from,$to)
 #käynnistää botin
 
 $tsunku = new tsunku($config);
+
+#hakee käyttäjän nickin
+function get_nick($a) 
+	{
+	//$exp = explode(" ", $a);
+	$nick = substr($a[0], 1, strpos($a[0], "!"));
+	$nick = strstr($nick, "!", true);
+	return $nick;
+	}
 
 ?>
