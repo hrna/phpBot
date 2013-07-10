@@ -115,7 +115,7 @@ function loop($config)
 	{
 		$command = str_replace(array(chr(10), chr(13)), '', $this->expl[3]);
 
-		if ($command[1] == "!") { $this->parse_command($command, $config); }
+		if ($command[1] == "!") { $this->parse_command($command); }
 		switch($command)
 		{
 
@@ -126,13 +126,13 @@ function loop($config)
 					break;
 				} else { $this->send_chan($this->get_nick($line).", Ei taida sun natsat riittää :(\r\n"); }
 
-			case ":!op":
+			/*case ":!op":
 				if (in_array($this->get_nick($line),$config["opers"]))
 				{
 					$this->send_data("MODE ".$this->expl[2]." +o ".$this->expl[4]."\r\n");
 					break;
 				} else { $this->send_chan($this->get_nick($line).", Ei taida sun natsat riittää :(\r\n"); }
-				
+				*/
 		}
 		
 	}
