@@ -49,8 +49,8 @@ function server_auth($config)
 #hakee käyttäjän nickin
 function get_nick($a) 
 	{
-	$exp = explode(" ", $a);
-	$nick = substr($exp[0], 1, strpos($exp[0], "!"));
+	//$exp = explode(" ", $a);
+	$nick = substr($a[0], 1, strpos($a[0], "!"));
 	$nick = strstr($nick, "!", true);
 	return $nick;
 	}
