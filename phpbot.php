@@ -178,9 +178,17 @@ function parse_command($command, $config)
 	{
 		$command = substr($command, 2);	
 		if (function_exists($command)) {
-			$this->send_chan($command($this->expl, $config));		
-		} else {
-    		$this->send_chan("Tuntematon komento: !".$command);
+			$pillu = ($command($this->expl, $config));
+			if (substr($pillu, 0, 4 ) === "MODE")
+			{
+				$this->send_data($pillu);
+			}else {
+				$this->send_chan($pillu);
+			}
+		}		 
+		if (!function_exists($command))
+		{	
+			$this->send_chan("Tuntematon komento: !".$command);
 		}
 	}
 
