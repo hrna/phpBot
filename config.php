@@ -13,12 +13,13 @@ $config = array(
 	"config" 	=> array(
 				"host"		=> "b0xi.eu",
 				"port"		=> 6667,
-				"nick"		=> "TsunkuBeta", 
+				"nick"		=> "Lamebot",
+				"altnick"	=> "TsunkuBeta", 
 				"ident"		=> "Tsunku2",
 				"chan"		=> "#tsunku",
 				"realname"	=> "tsunku v2",
 				"versio"	=> "PHP Tsunku version 0.3.4",
-				"debug"		=> "false" #console debugging true/false
+				"debug"		=> "true" #console debugging true/false
 				),
 	"opers" 	=> array("hrna", "oper2", "etc...") #operaattorit
 	);

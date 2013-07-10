@@ -41,11 +41,11 @@ function server_auth($config)
 	{
 	echo "* Preparing AUTH info for the server *\r\n";
 	$this->send_data("NICK ".$config["config"]["nick"]);
-	$this->send_data("USER ".$config["config"]["ident"]." ".$config["config"]["host"]." liibalaaba :".$config["config"]["realname"]);
-	$this->send_data("JOIN", $config["config"]["chan"]);
+ 	$this->send_data("USER ".$config["config"]["ident"]." ".$config["config"]["host"]." liibalaaba :".$config["config"]["realname"]);
+	//$this->send_data("JOIN", $config["config"]["chan"]); #Joinitaan vasta loopissa kun tehty nickin tarkastus jne..
 	echo $config["color"]["lgreen"]."* AUTH OK *\r\n\r\n".$config["color"]["end"];
 	}
-
+	
 #hakee käyttäjän nickin
 function get_nick($a) 
 	{
@@ -64,6 +64,14 @@ function loop($config)
 	$line = fgets($this->socket, 256);
 	flush();
 	$this->expl = explode(" ", $line);
+	
+	if ($this->expl[1] == "433") #Hack - onko nick käytössä?
+	{
+		$this->send_data("NICK ".$config["config"]["altnick"]); #Hack - alternative nick
+	}
+	if ($this->expl[1] == "376") { # Jos nick on ok ja motd on loppu, joinitaan kanavalle
+		$this->send_data("JOIN", $config["config"]["chan"]);
+	}
 	
 	#vastaa palvelimen pingiin
 	if ($this->expl[0] == "PING")
@@ -143,7 +151,7 @@ function send_data($output, $msg = null)
 		{
 			fwrite($this->socket, $output."\r\n");
 			echo $output."\r\n";
-		} else {
+ 		} else {
 			fwrite($this->socket, $output." ".$msg."\r\n");
 			echo $output." ".$msg."\r\n";
 			}
