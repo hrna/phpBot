@@ -17,13 +17,6 @@ echo "*                         *\r\n";
 echo "***************************\r\n";
 /** BOT CFG ABOWE **/
 
-#Ladataan moduulit, mitenhän tämän tekis?
-/*foreach ($config["modules"] as $mod)
-{
-	echo "Loading module: ".$mod;
-	include("modules/".$mod."_module.php");
-}*/
-
 
 class tsunku {
 
@@ -40,6 +33,7 @@ function __construct($config)
 	$this->server_auth($config);
 	echo "* Sending AUTH to server. => Joining ".$config["color"]["lred"].$config["config"]["chan"].$config["color"]["end"]." *\r\n";
 	echo "=> Entering the mainloop =>\r\n";
+	$this->load_modules($config);
 	$this->loop($config);
 	}
 
@@ -59,6 +53,15 @@ function get_nick($a)
 	$nick = substr($exp[0], 1, strpos($exp[0], "!"));
 	$nick = strstr($nick, "!", true);
 	return $nick;
+	}
+#Ladataan moduulit, mitenhän tämän tekis?
+function load_modules($config)
+	{
+		foreach ($config["modules"] as $mod)
+		{
+			echo "Loading module: ".$mod;
+			include("modules/".$mod."_module.php");
+		}	
 	}
 
 function loop($config)
@@ -163,9 +166,10 @@ function loop($config)
 			case ":!wiki":
 				if ($this->expl[4])
 				{
-					$this->send_chan($this->wiki($this->expl));
+					$this->send_chan(wiki($this->expl));
 					break;
 				} else { $this->send_chan("Usage: !wiki MS Silja Europa"); break;}
+			
 				
 		}
 		
@@ -223,7 +227,7 @@ function valuutta($amount,$from,$to)
     	}
 
 #wikihakustringi
-function wiki($haku)
+/*function wiki($haku)
 	{
 		$string_num = count($haku);
 		$result = array();
@@ -237,7 +241,7 @@ function wiki($haku)
 		$result = implode("_",$result);
 		$result = "http://en.wikipedia.org/wiki/".ucfirst($result); #Eka kirjain isoksi
 		return $result;
-	}
+	}*/
 
 } #class end#
 
