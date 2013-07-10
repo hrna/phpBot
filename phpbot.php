@@ -18,11 +18,11 @@ echo "***************************\r\n";
 /** BOT CFG ABOWE **/
 
 #Ladataan moduulit, mitenhän tämän tekis?
-foreach ($config["modules"] as $mod)
+/*foreach ($config["modules"] as $mod)
 {
 	echo "Loading module: ".$mod;
 	include("modules/".$mod."_module.php");
-}
+}*/
 
 
 class tsunku {
@@ -60,7 +60,7 @@ function get_nick($a)
 	$nick = strstr($nick, "!", true);
 	return $nick;
 	}
-	
+
 function loop($config)
 	{
 	
@@ -163,7 +163,7 @@ function loop($config)
 			case ":!wiki":
 				if ($this->expl[4])
 				{
-					$this->send_chan(wiki($this->expl[4]));
+					$this->send_chan($this->wiki($this->expl));
 					break;
 				} else { $this->send_chan("Usage: !wiki MS Silja Europa"); break;}
 				
@@ -223,7 +223,7 @@ function valuutta($amount,$from,$to)
     	}
 
 #wikihakustringi
-/**function wiki($haku)
+function wiki($haku)
 	{
 		$string_num = count($haku);
 		$result = array();
@@ -237,7 +237,7 @@ function valuutta($amount,$from,$to)
 		$result = implode("_",$result);
 		$result = "http://en.wikipedia.org/wiki/".ucfirst($result); #Eka kirjain isoksi
 		return $result;
-	}**/
+	}
 
 } #class end#
 
