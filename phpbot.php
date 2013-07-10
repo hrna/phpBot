@@ -64,7 +64,7 @@ function loop($config)
 	flush();
 	$this->expl = explode(" ", $line);
 	
-	if (isset($this->expl[1])
+	if (isset($this->expl[1]))
 	{
 		if ($this->expl[1] == "433") #onko nick käytössä? Vedellään niin kauan että löytyy sopiva nick... #Huonoa koodia?
 		{
