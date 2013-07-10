@@ -64,30 +64,33 @@ function loop($config)
 	flush();
 	$this->expl = explode(" ", $line);
 	
-	if ($this->expl[1] == "433") #onko nick käytössä? Vedellään niin kauan että löytyy sopiva nick... #Huonoa koodia?
+	if (isset($this->expl[1])
 	{
-		$nick = $this->send_data("NICK ".$config["config"]["altnick"]);
-		if ($nick != "433")
+		if ($this->expl[1] == "433") #onko nick käytössä? Vedellään niin kauan että löytyy sopiva nick... #Huonoa koodia?
 		{
-			foreach (explode(",", $config["config"]["chans"]) as $chan)
-			{		
-				$this->join_channel($chan);
-			}
-		} else {
-			while ($nick == "433")
+			$nick = $this->send_data("NICK ".$config["config"]["altnick"]);
+			if ($nick != "433")
 			{
-				$nick = $this->send_data("NICK ".$config["config"]["nick"].rand(1,10));
-				sleep(1);
-			}
+				foreach (explode(",", $config["config"]["chans"]) as $chan)
+				{		
+					$this->join_channel($chan);
+				}
+			} else {
+				while ($nick == "433")
+				{
+					$nick = $this->send_data("NICK ".$config["config"]["nick"].rand(1,10));
+					sleep(1);
+				}
+				foreach (explode(",", $config["config"]["chans"]) as $chan)
+				{		
+				$this->join_channel($chan);
+				}
+			} 
+		} else if ($this->expl[1] == "376") {
 			foreach (explode(",", $config["config"]["chans"]) as $chan)
 			{		
 				$this->join_channel($chan);
 			}
-		} 
-	} else if ($this->expl[1] == "376") {
-		foreach (explode(",", $config["config"]["chans"]) as $chan)
-		{		
-			$this->join_channel($chan);
 		}
 	}
 		
