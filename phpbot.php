@@ -76,11 +76,14 @@ function loop($config)
 		} else {
 			while ($nick == "433")
 			{
+<<<<<<< HEAD
 				$nick = $this->send_data("NICK ".$config["config"]["nick"].rand(1,10));
 				sleep(1);
 			}
 			foreach (explode(",", $config["config"]["chans"]) as $chan)
 			{		
+=======
+>>>>>>> 778eda7f62aeca037b4c57bf6ffdb0cc63e21e39
 				$this->join_channel($chan);
 			}
 		}

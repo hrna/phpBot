@@ -13,15 +13,22 @@ $config = array(
 	"config" 	=> array(
 				"host"		=> "b0xi.eu",
 				"port"		=> 6667,
+<<<<<<< HEAD
 				"nick"		=> "TsunkuBeta",
 				"altnick"	=> "TsunkuAlpha", 
 				"ident"		=> "Tsunku2",
 				"chans"		=> "#tsunku", #Pilkulla erotettuna kanavan nimet
+=======
+				"nick"		=> "TsunkuBot",
+				"altnick"	=> "TsunkuBotti", 
+				"ident"		=> "Tsunku2",
+				"chans"		=> "#tsunku", #pilkulla erottaa muut kanavat esim: "#tsunku,#chan2", multichan support not tested.
+>>>>>>> 778eda7f62aeca037b4c57bf6ffdb0cc63e21e39
 				"realname"	=> "tsunku v2",
 				"versio"	=> "PHP Tsunku version 0.3.4",
 				"debug"		=> "true" #console debugging true/false
 				),
-	"opers" 	=> array("hrna", "oper2", "etc...") #operaattorit
+	"opers" 	=> array("hrna", "jaska", "etc...") #operaattorit
 	);
 
 ?>
