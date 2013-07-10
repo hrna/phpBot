@@ -13,15 +13,15 @@ $config = array(
 	"config" 	=> array(
 				"host"		=> "b0xi.eu",
 				"port"		=> 6667,
-				"nick"		=> "Lamebot",
-				"altnick"	=> "TsunkuBeta", 
+				"nick"		=> "TsunkuBot",
+				"altnick"	=> "TsunkuBotti", 
 				"ident"		=> "Tsunku2",
-				"chans"		=> "#tsunku,#adminss",
+				"chans"		=> "#tsunku", #pilkulla erottaa muut kanavat esim: "#tsunku,#chan2", multichan support not tested.
 				"realname"	=> "tsunku v2",
 				"versio"	=> "PHP Tsunku version 0.3.4",
 				"debug"		=> "true" #console debugging true/false
 				),
-	"opers" 	=> array("hrna", "oper2", "etc...") #operaattorit
+	"opers" 	=> array("hrna", "jaska", "etc...") #operaattorit
 	);
 
 ?>
