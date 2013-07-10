@@ -160,12 +160,12 @@ function parse_command($command, $config)
 	{
 		$command = substr($command, 2);	
 		if (function_exists($command)) {
-			$pillu = ($command($this->expl, $config));
-			if (substr($pillu, 0, 4 ) === "MODE") ## jos server-komento
+			$data = ($command($this->expl, $config));
+			if (substr($data, 0, 4 ) === "MODE") ## jos server-komento
 			{
-				$this->send_data($pillu);
+				$this->send_data($data);
 			}else {
-				$this->send_chan($pillu);
+				$this->send_chan($data);
 			}
 		}		 
 		if (!function_exists($command))
