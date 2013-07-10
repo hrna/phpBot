@@ -42,7 +42,6 @@ function server_auth($config)
 	echo "* Preparing AUTH info for the server *\r\n";
 	$this->send_data("NICK ".$config["config"]["nick"]);
  	$this->send_data("USER ".$config["config"]["ident"]." ".$config["config"]["host"]." liibalaaba :".$config["config"]["realname"]);
-	//$this->send_data("JOIN", $config["config"]["chan"]); #Joinitaan vasta loopissa kun tehty nickin tarkastus jne..
 	echo $config["color"]["lgreen"]."* AUTH OK *\r\n\r\n".$config["color"]["end"];
 	}
 	
