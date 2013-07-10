@@ -158,7 +158,7 @@ function loop($config)
 				if ($this->expl[4])
 				{
 					$wiki = new wiki();
-					$this->send_chan(wiki->wiki($this->expl));
+					$this->send_chan($wiki->wiki($this->expl));
 					break;
 				} else { $this->send_chan("Usage: !wiki MS Silja Europa"); break;}
 		}
