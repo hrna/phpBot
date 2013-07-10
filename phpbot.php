@@ -115,7 +115,7 @@ function loop($config)
 	{
 		$command = str_replace(array(chr(10), chr(13)), '', $this->expl[3]);
 
-		if ($command[1] == "!") { $this->parse_command($command); }
+		if ($command[1] == "!") { $this->parse_command($command, $config); }
 		switch($command)
 		{
 
