@@ -157,7 +157,8 @@ function loop($config)
 			case ":!wiki":
 				if ($this->expl[4])
 				{
-					$this->send_chan(wiki::wiki($this->expl));
+					$wiki = new wiki();
+					$this->send_chan(wiki->wiki($this->expl));
 					break;
 				} else { $this->send_chan("Usage: !wiki MS Silja Europa"); break;}
 		}
