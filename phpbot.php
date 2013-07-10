@@ -183,20 +183,6 @@ function parse_command($command, $config)
     		$this->send_chan("Tuntematon komento: !".$command);
 		}
 	}
-#googlevaluutta By Jaska
-function valuutta($amount,$from,$to)
-	{
-	$dom = new DOMDocument();
-	@$dom->loadHTMLFile("https://www.google.com/finance/converter?a=".$amount."&from=".$from."&to=".$to."");
-
-	$xpath = new DOMXPath($dom);
-
-		foreach ($xpath->query('//div[contains(@id,"currency_converter_result")]') as $tag) {
-		$result = "";
-		$result .= trim($tag->nodeValue);
-		return $result;
-		}
-    	}
 
 } #class end#
 
