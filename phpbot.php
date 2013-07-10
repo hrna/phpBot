@@ -191,7 +191,7 @@ function wiki($haku)
 			}
 		}				
 		$result = implode("_",$result);
-		$result = "http://en.wikipedia.org/wiki/".$result; #resultissa pitäisi olla jokaisen sanan eka kirjain isolla..
+		$result = "http://en.wikipedia.org/wiki/".ucfirst($result); #Eka kirjain isoksi
 		return $result;
 	}
 
