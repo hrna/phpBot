@@ -114,7 +114,7 @@ function loop($config)
 	if (isset($this->expl[3]))
 	{
 		$command = str_replace(array(chr(10), chr(13)), '', $this->expl[3]);
-
+			
 		if ($command[1] == "!") { $this->parse_command($command, $config); } # suoritetaan komento
 		
 	}
@@ -164,6 +164,10 @@ function parse_command($command, $config)
 			if (substr($data, 0, 4 ) === "MODE") ## jos server-komento
 			{
 				$this->send_data($data);
+			}
+			elseif ($command == "get_nick")
+			{
+				#do nothing...
 			}else {
 				$this->send_chan($data);
 			}
