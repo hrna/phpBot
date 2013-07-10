@@ -69,9 +69,13 @@ function loop($config)
 	{
 		$this->send_data("NICK ".$config["config"]["altnick"]); #Hack - alternative nick
 	}
-	if ($this->expl[1] == "376") { # Jos nick on ok ja motd on loppu, joinitaan kanavalle
-		$this->send_data("JOIN", $config["config"]["chan"]);
-	}
+	if ($this->expl[1] == "376") { # Jos kaikki ok ja motd on loppu, joinitaan kanaville
+		$chans = explode(",", $config["config"]["chans"]);
+			foreach ($chans as $chan)
+			{
+				$this->send_data("JOIN", $chan);
+			}
+	}		
 	
 	#vastaa palvelimen pingiin
 	if ($this->expl[0] == "PING")
