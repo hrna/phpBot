@@ -71,7 +71,7 @@ function loop($config)
 		{
 			foreach (explode(",", $config["config"]["chans"]) as $chan)
 			{		
-				$this->join_chan($chan);
+				$this->join_channel($chan);
 			}
 		} else {
 			while ($nick == "433")
@@ -83,9 +83,13 @@ function loop($config)
 			{		
 				$this->join_channel($chan);
 			}
+		} 
+	} else if ($this->expl[1] == "376") {
+		foreach (explode(",", $config["config"]["chans"]) as $chan)
+		{		
+			$this->join_channel($chan);
 		}
 	}
-
 		
 	
 	#vastaa palvelimen pingiin
