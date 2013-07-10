@@ -1,8 +1,9 @@
 <?php
 
-function version ($data)
+function version ($data, $config)
 {
-	return "- KORJAA - 0.3.4";
+
+	return $config["modules"]["version"];
 
 }
 

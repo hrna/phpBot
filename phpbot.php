@@ -115,7 +115,7 @@ function loop($config)
 	{
 		$command = str_replace(array(chr(10), chr(13)), '', $this->expl[3]);
 
-		if ($command[1] == "!") { $this->parse_command($command); }
+		if ($command[1] == "!") { $this->parse_command($command, $config); }
 		switch($command)
 		{
 
@@ -174,11 +174,11 @@ function join_channel($chan)
 	}
 
 #Suoritetaan toiminto jos olemassa
-function parse_command($command) 
+function parse_command($command, $config) 
 	{
 		$command = substr($command, 2);	
 		if (function_exists($command)) {
-			$this->send_chan($command($this->expl));		
+			$this->send_chan($command($this->expl, $config));		
 		} else {
     		$this->send_chan("Tuntematon komento: !".$command);
 		}

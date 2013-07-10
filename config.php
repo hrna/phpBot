@@ -1,5 +1,5 @@
 <?php
-
+global $config;
 $config = array(
 	"color"		=> array(
 				"blue" 		=> "\033[0;34m",
