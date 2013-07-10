@@ -3,7 +3,7 @@
 function version ($data, $config)
 {
 
-	return $config["modules"]["version"];
+	return $config["config"]["version"];
 
 }
 
