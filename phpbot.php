@@ -125,17 +125,6 @@ function loop($config)
 		if ($command[1] == "!") { $this->parse_command($command); }
 		switch($command)
 		{
-			case ":!cmd":
-				$this->send_chan($this->get_nick($line).", käytössä olevat komennot ovat: !cmd, !opme, !op <nick>, !klo, !version, !g <amount> <from> <to>, !credits, !wiki");
-				break;
-
-			case ":!klo":
-				$this->send_chan($this->get_nick($line).": Kello on ".date("H:i:s"));
-				break;
-
-			case ":!version":
-				$this->send_chan($config["config"]["versio"]);
-				break;
 
 			case ":!opme":
 				if (in_array($this->get_nick($line), $config["opers"]))
