@@ -18,7 +18,7 @@ $config = array(
 				"ident"		=> "Tsunku2",
 				"chans"		=> "#tsunku", #Pilkulla erotettuna kanavan nimet
 				"realname"	=> "tsunku v2",
-				"versio"	=> "PHP Tsunku version 0.3.4",
+				"versio"	=> "PHP Tsunku version 0.4.0",
 				"debug"		=> "true" #console debugging true/false
 				),
 	"opers" 	=> array("hrna", "jaska", "etc..."), #operaattorit
