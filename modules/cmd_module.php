@@ -2,7 +2,9 @@
 
 function cmd($data) 
 {
-	$komennot = get_nick($data).", käytössä olevat komennot ovat: !cmd, !opme, !op <nick>, !klo, !version, !g <amount> <from> <to>, !credits, !wiki";
+	$nick = substr($data[0], 1, strpos($data[0], "!"));
+	$nick = strstr($nick, "!", true);
+	$komennot = $nick.", käytössä olevat komennot ovat: !cmd, !opme, !op <nick>, !klo, !version, !kurssi <amount> <from> <to>, !credits, !wiki";
 	return $komennot;
 }
 
