@@ -138,9 +138,9 @@ function send_data($output, $msg = null)
 			}
 	}
 #validoi käyttäjän nickin
-function nick_check($tauhka)
+function nick_check($input)
 	{
-			fwrite($this->socket, $tauhka."\r\n");
+			fwrite($this->socket, $input."\r\n");
 			$line = fgets($this->socket, 256);
 			$this->expl = explode(" ", $line);
 	}
