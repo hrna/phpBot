@@ -32,7 +32,7 @@ function __construct($config)
 	echo "* Initializing the connection... *\r\n\r\n";
 	$this->socket = fsockopen($config["config"]["host"],$config["config"]["port"]);
 	$this->server_auth($config);
-	echo "* Sending AUTH to server. => Joining ".$config["color"]["lred"].$config["config"]["chan"].$config["color"]["end"]." *\r\n";
+	echo "* Sending AUTH to server. => Joining ".$config["color"]["lred"].$config["config"]["chans"].$config["color"]["end"]." *\r\n";
 	echo "=> Entering the mainloop =>\r\n";
 	$this->load_modules($config); #Ladataan moduulit
 	$this->loop($config);
@@ -72,7 +72,7 @@ function loop($config)
 	{
 		if ($this->expl[1] == "433") #onko nick käytössä? Vedellään niin kauan että löytyy sopiva nick... #Huonoa koodia?
 		{
-			$nick = $this->send_data("NICK ".$config["config"]["altnick"]);
+			$nick = $this->nick_check("NICK ".$config["config"]["altnick"]);
 			if ($nick != "433")
 			{
 				foreach (explode(",", $config["config"]["chans"]) as $chan)
@@ -82,7 +82,7 @@ function loop($config)
 			} else {
 				while ($nick == "433")
 				{
-					$nick = $this->send_data("NICK ".$config["config"]["nick"].rand(1,10));
+					$nick = $this->nick_check("NICK ".$config["config"]["nick"].rand(1,10));
 					sleep(1);
 				}
 				foreach (explode(",", $config["config"]["chans"]) as $chan)
@@ -132,14 +132,18 @@ function send_data($output, $msg = null)
 		{
 			fwrite($this->socket, $output."\r\n");
 			echo $output."\r\n";
-			$line = fgets($this->socket, 256);
-			$this->expl = explode(" ", $line);
-			return $this->expl[1];
-			
  		} else {
 			fwrite($this->socket, $output." ".$msg."\r\n");
 			echo $output." ".$msg."\r\n";
 			}
+	}
+#validoi käyttäjän nickin
+function nick_check($tauhka)
+	{
+			fwrite($this->socket, $tauhka."\r\n");
+			$line = fgets($this->socket, 256);
+			$this->expl = explode(" ", $line);
+			return $this->expl[1]; echo $this->expl[1];
 	}
 
 #lähettää dataa kanavalle
