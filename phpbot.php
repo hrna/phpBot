@@ -115,9 +115,10 @@ function loop($config)
 	if (isset($this->expl[3]))
 	{
 		$command = str_replace(array(chr(10), chr(13)), '', $this->expl[3]);
-			
-		if ($command[1] == "!") { $this->parse_command($command, $config); } # suoritetaan komento // PHP Notice:  Uninitialized string offset: 1 on line 118
-		#no fix, at least no fix for now... :(
+		
+			if (isset($command[1]) && $command[1] == "!") { $this->parse_command($command, $config); } # suoritetaan komento 
+			// PHP Notice:  Uninitialized 		string offset: 1 on line 118
+			#no fix, at least no fix for now... :(
 	}
 
 	#loopataan uusiksi
