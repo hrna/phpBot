@@ -186,7 +186,7 @@ function parse_command($command, $config)
 			{
 				$this->send_data($data);
 			}
-			elseif ($command == "get_nick")
+			elseif (in_array($command,$config["sysmods"]))
 			{
 				#do nothing...
 			}else {
