@@ -2,7 +2,7 @@
 
 function kurssi($data)
 	{
-	if (is_numeric($data[4]))
+	if (is_numeric($data[4]) && isset($data[4]) && isset($data[5]) && isset($data[6]))
 	{
 		ini_set("user_agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Firefox/24.0");	
 		$amount = $data[4];			
@@ -21,6 +21,8 @@ function kurssi($data)
 			return $result;
 			}
 		}
+    }else {
+    	return "Usage: !kurssi 1 eur usd"; 
     }
     }
     
