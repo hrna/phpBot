@@ -8,7 +8,7 @@ function programmer ($data, $config)
 	$line_amount = count($lines);
 	$random = rand(0, $line_amount-1);
 	
-	return "You might be a programmer if ".$lines[$random];
+	return "You might be a programmer if ".lcfirst($lines[$random]);
 
 }
 
