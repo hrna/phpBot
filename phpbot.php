@@ -53,7 +53,7 @@ function load_modules($config)
 	{
 		foreach ($config["modules"] as $mod)
 		{
-			if (is_file("modules/".$mod."_module.php")
+			if (is_file("modules/".$mod."_module.php"))
 			{
 				echo "Loading module: ".$mod."\r\n";
 				include("modules/".$mod."_module.php");
