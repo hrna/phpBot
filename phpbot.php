@@ -32,7 +32,7 @@ function __construct($config)
 	echo "* Initializing the connection... *\r\n\r\n";
 	$this->socket = fsockopen($config["config"]["host"],$config["config"]["port"]);
 	$this->server_auth($config);
-	echo "* Sending AUTH to server. => Joining ".$config["color"]["lred"].$config["config"]["chans"].$config["color"]["end"]." *\r\n";
+	echo "* Sending AUTH to server. => Joining ".$config["color"]["lgreen"].$config["config"]["chans"].$config["color"]["end"]." *\r\n";
 	echo "=> Entering the mainloop =>\r\n";
 	$this->load_modules($config); #Ladataan moduulit
 	$this->loop($config);
@@ -55,10 +55,10 @@ function load_modules($config)
 		{
 			if (is_file("modules/".$mod."_module.php"))
 			{
-				echo "Loading module: ".$mod."\r\n";
+				echo "Loading module: ".$config["color"]["lgreen"].$mod.$config["color"]["end"]."\r\n";
 				include("modules/".$mod."_module.php");
 			} else { 
-				echo $mod." module is not available\r\n"; 
+				echo $config["color"]["lred"].$mod." module is not available\r\n".$config["color"]["end"]; 
 			}
 		}	
 	}
