@@ -19,10 +19,10 @@ $config = array(
 				"chans"		=> "#tsunku", #Pilkulla erotettuna kanavan nimet
 				"realname"	=> "tsunku v2",
 				"version"	=> "PHP Tsunku version 0.4.0",
-				"debug"		=> "true" #console debugging true/false
+				"debug"		=> "false" #console debugging true/false
 				),
 	"opers" 	=> array("hrna", "jaska", "etc..."), #operaattorit
-	"modules"	=> array("get_nick","wiki","kurssi","cmd","klo","version","op","opme")
+	"modules"	=> array("get_nick","wiki","kurssi","cmd","klo","version","op","opme","kurwa")
 	);
 
 ?>

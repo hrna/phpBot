@@ -58,7 +58,7 @@ function load_modules($config)
 				echo "Loading module: ".$mod."\r\n";
 				include("modules/".$mod."_module.php");
 			} else { 
-				echo "No such module available"; 
+				echo $mod." module is not available\r\n"; 
 			}
 		}	
 	}
