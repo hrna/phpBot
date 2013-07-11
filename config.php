@@ -19,10 +19,11 @@ $config = array(
 				"chans"		=> "#tsunku", #Pilkulla erotettuna kanavan nimet
 				"realname"	=> "tsunku v2",
 				"version"	=> "PHP Tsunku version 0.4.0",
-				"debug"		=> "true" #console debugging true/false
+				"debug"		=> "false" #console debugging true/false
 				),
-	"opers" 	=> array("hrna@oper.aquanet.fi", "jaska", "hrna"), #operaattorit
-	"modules"	=> array("get_nick","wiki","kurssi","cmd","klo","version","op","programmer","fmi","oper_auth")
+	"opers" 	=> array("hrna@oper.aquanet.fi", "jaska",), #operaattorit
+	"modules"	=> array("wiki","kurssi","cmd","klo","version","op","programmer","fmi"),
+	"sysmods" 	=> array("get_nick","oper_auth")
 	);
 
 ?>

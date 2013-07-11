@@ -51,6 +51,18 @@ function server_auth($config)
 #Ladataan moduulit, mitenhän tämän tekis?
 function load_modules($config)
 	{
+		echo $config["color"]["lblue"]."LOADING SYSTEM MODULES\r\n".$config["color"]["end"];
+		foreach ($config["sysmods"] as $mod)
+		{
+			if (is_file("modules/".$mod."_system_module.php"))
+			{
+				echo "Loading module: ".$config["color"]["lgreen"].$mod.$config["color"]["end"]."\r\n";
+				include("modules/".$mod."_system_module.php");
+			} else { 
+				echo $config["color"]["lred"].$mod." module is not available\r\n".$config["color"]["end"]; 
+			}
+		}
+		echo $config["color"]["lblue"]."LOADING MODULES\r\n".$config["color"]["end"];
 		foreach ($config["modules"] as $mod)
 		{
 			if (is_file("modules/".$mod."_module.php"))
