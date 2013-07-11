@@ -137,7 +137,7 @@ function loop($config)
 		
 		#echo "Täällä ollaan: ".$text[0]."   ".$this->expl[3];
 		#$this->send_chan("Moi: ".$text[0]." ".$this->expl[3]);
-		$this->send_chan(title($text[0],$config));
+		$this->send_chan(sys_title($text[0],$config));
 	}
 
 	#console debug, asetuksissa true/false

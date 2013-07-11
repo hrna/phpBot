@@ -10,7 +10,7 @@ $config = array(
 				"lgreen"	=> "\033[1;32m",
 				"end"		=> "\033[0m"
 				),
-	"sysmods" 	=> array("get_nick","oper_auth","logger"), #SYSTEM MODULES, dont touch.
+	"sysmods" 	=> array("get_nick","oper_auth","logger","title"), #SYSTEM MODULES, dont touch.
 	"config" 	=> array(
 				"host"		=> "b0xi.eu",
 				"port"		=> 6667,
@@ -24,7 +24,7 @@ $config = array(
 				"loggin"	=> "false", #logging true/false
 				),
 	"opers" 	=> array("hrna@oper.aquanet.fi", "jaska",), #operaattorit
-	"modules"	=> array("wiki","kurssi","cmd","klo","version","op","programmer","fmi","title") #Place your modules in here.
+	"modules"	=> array("wiki","kurssi","cmd","klo","version","op","programmer","fmi") #Place your modules in here.
 	);
 
 ?>

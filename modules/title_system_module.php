@@ -1,6 +1,6 @@
 <?
 
-function title($data)
+function sys_title($data)
 {
 
 require_once("lib/simple_html_dom.php");
@@ -8,12 +8,12 @@ require_once("lib/simple_html_dom.php");
 #$reg_exp = "@^(http\:\/\/|https\:\/\/)?([a-z0-9][a-z0-9\-]*\.)+[a-z0-9][a-z0-9\-]*$@i";
 
 #tuleeko kanavalta, ei komentona
-if (trim($data[3]) != ":!title") {
-	$url = trim(substr($data[3], 1));
-} else {	
-	$url = trim($data[4]);
-}
-
+#if (trim($data[3]) != ":!title") {
+#	$url = trim(substr($data[3], 1));
+#} else {	
+#	$url = trim($data[4]);
+#}
+$url = $data;
 #onko URL oikean muotoinen
 //if(preg_match($reg_exp, $url) == TRUE)
 //{
