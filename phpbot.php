@@ -127,21 +127,6 @@ function loop($config)
 	{
 		$this->send_chan(title($this->expl,$config));
 	}
-	#urlit keskeltä..
-	if (isset($this->expl[3]))
-	{
-		foreach($thix->expl as $value)
-		{
-			$sub = substr($value, 0,7); #http://
-			$sub2 = substr($value, 0,8); #https://
-			$sub3 = substr($value,0,4); #www.
-			if (($sub == "http://") or ($sub2 == "https://") or ($sub3 == "www."))
-			{
-				$this->send_chan($this->expl[$value]);
-			}
-		}
-	}
-
 
 	#console debug, asetuksissa true/false
 	if ($config["config"]["debug"] == "true")
