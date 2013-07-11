@@ -121,7 +121,12 @@ function loop($config)
 	{
 		$this->send_data("PONG", $this->expl[1]); 
 	}
-
+	
+	#palauttaa urlin titlen
+	if (isset($this->expl[3]) && substr($this->expl[3], 0, 8) == ":http://" || substr($this->expl[3], 0, 9) == ":https://")
+	{
+		$this->send_chan(title($this->expl,$config));
+	}
 	#console debug, asetuksissa true/false
 	if ($config["config"]["debug"] == "true")
 	{
