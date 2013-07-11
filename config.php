@@ -21,7 +21,7 @@ $config = array(
 				"version"	=> "PHP Tsunku version 0.4.0",
 				"debug"		=> "false" #console debugging true/false
 				),
-	"opers" 	=> array("hrna", "jaska", "etc..."), #operaattorit
+	"opers" 	=> array("hrna@oper.aquanet.fi", "jaska", "hrna"), #operaattorit
 	"modules"	=> array("get_nick","wiki","kurssi","cmd","klo","version","op","programmer","fmi")
 	);
 
