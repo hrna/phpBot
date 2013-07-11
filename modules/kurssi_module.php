@@ -3,7 +3,8 @@
 function kurssi($data)
 	{
 	if (is_numeric($data[4]))
-	{	
+	{
+		ini_set("user_agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Firefox/24.0");	
 		$amount = $data[4];			
 		$from = $data[5];
 		$to = $data[6];
