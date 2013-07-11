@@ -1,10 +1,8 @@
 <?php
 
-function version ($data, $config)
+function version ($config)
 {
-
 	return $config["config"]["version"];
-
 }
 
 ?>

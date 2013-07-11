@@ -1,6 +1,6 @@
 <?
 
-function fmi($data, $config) 
+function fmi($data) 
 {
 	$saa = "";
 	$dom = new DOMDocument();

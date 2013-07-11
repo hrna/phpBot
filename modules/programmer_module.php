@@ -1,6 +1,6 @@
 <?
 
-function programmer ($data, $config)
+function programmer ()
 {
 	#You Might Be A Programmer If:
 
