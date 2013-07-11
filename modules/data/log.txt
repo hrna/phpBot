@@ -55,4 +55,33 @@ hrna@#tsunku > :dsa
  [23:47:03] TsunkuBeta@#tsunku > :Usage: !op <nick>
  [23:47:06] hrna@#tsunku > :noni
  [23:47:08] hrna@#tsunku > :pussaan ton
+ [23:50:23] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [23:50:27] jaska@#tsunku > :dhfjdhjfdj öklklö http://www.google.com
+ [23:50:30] hrna@#tsunku > +o TsunkuBeta
+ [23:50:33] hrna@#tsunku > -o hrna
+ [23:50:34] jaska@#tsunku > :vittu, tuo hajos sit :DF
+ [23:50:36] hrna@#tsunku > :!op
+ [23:50:36] TsunkuBeta@#tsunku > +o hrna
+ [23:50:39] hrna@#tsunku > :toi toimi :P
+ [23:50:44] jaska@#tsunku > :dhfjdhjfdj öklklö https://www.google.com
+ [23:50:46] jaska@#tsunku > :en osannukkaan rexexii oikein
+ [23:50:48] jaska@#tsunku > ::P
+ [23:50:56] hrna@#tsunku > :!version
+ [23:50:56] jaska@#tsunku > :vittu tuota tajua, pitää googleyttaa valmis
+ [23:51:02] hrna@#tsunku > ::D
+ [23:51:18] hrna@#tsunku > :siis osaa http:// mutta ei https:// ?
+ [23:51:45] jaska@#tsunku > :nyt osaa https mut ei http :D
+ [23:51:50] jaska@#tsunku > :laitan ehdon tohon rexexiin
+ [23:51:54] jaska@#tsunku > :että joko tai
+ [23:52:10] hrna@#tsunku > :joo
+ [23:52:17] hrna@#tsunku > :if jotain or jotain
+ [23:52:38] jaska@#tsunku > :ei tarvi
+ [23:52:55] hrna@#tsunku > :niin oliko se versio .0.4.2 si ny
+ [23:52:59] @ > [23:53:03] jaska@#tsunku > :ju
+ [23:54:03] @ > [23:54:19] hrna@#tsunku > :psuhasin conggit
+ [23:54:21] hrna@#tsunku > :conffit
+ [23:55:04] @ > [23:56:19] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [23:56:34] jaska@#tsunku > :dhfjdhjfdj öklklö https://www.google.com
+ [23:56:37] jaska@#tsunku > :dhfjdhjfdj öklklö http://www.google.com
+ [23:56:39] jaska@#tsunku > :he
  

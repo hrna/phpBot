@@ -37,7 +37,7 @@ function __construct($config)
 	echo "* Sending AUTH to server. => Joining ".$config["color"]["lgreen"].$config["config"]["chans"].$config["color"]["end"]." *\r\n";
 	echo "=> Entering the mainloop =>\r\n";
 	$this->load_modules($config); #Ladataan moduulit
-	echo "Logging is ".$config["color"]["lblue"].$config["config"]["loggin"].$config["color"]["end"]."\r\n";
+	echo "Logging is ".$config["color"]["lblue"].$config["config"]["logging"].$config["color"]["end"]."\r\n";
 	$this->loop($config);
 	}
 
@@ -132,7 +132,7 @@ function loop($config)
 	}
 	
 	#palauttaa urlin titlen
-	if (isset($this->expl[3]) && preg_match('/(http(s):\/\/[^\s]+)/', $line, $text))
+	if (isset($this->expl[3]) && preg_match('!(http)(s)?:\/\/[a-zA-Z0-9.?&_/]+!', $line, $text))
 	{
 		
 		#echo "Täällä ollaan: ".$text[0]."   ".$this->expl[3];
