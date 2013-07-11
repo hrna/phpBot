@@ -1,189 +1,25 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @TsunkuBeta > #tsunku :End of /NAMES list.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-hrna@#tsunku > :alloo
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-hrna@#tsunku > :jännää
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-hrna@#tsunku > :kivaa
-
-
-
- 
-
-
-
-
-
-@TsunkuBeta > #tsunku :End of /NAMES list.
-
- 
-
-
 hrna@#tsunku > :asd
+ 
+hrna@#tsunku > :dsa
+ 
+@TsunkuBeta > #tsunku :End of /NAMES list.
+ hrna@#tsunku > :jau
+ hrna@#tsunku > :jou
+ @TsunkuBeta > #tsunku :End of /NAMES list.
+ hrna@#tsunku > :testi
+ hrna@#tsunku > :resti
+ hrna@#tsunku > :pesti
+ @TsunkuAlpha > #tsunku :End of /NAMES list.
+ TsunkuBeta@:Remote > host closed the connection
+ jaska@#tsunku > :arvaa kuka sai toimii
+ hrna@#tsunku > :kyrvännön mansikanpoimintajuhlat alkaa huomenna
+ TsunkuBeta@:#tsunku
+ > jaska@#tsunku > :!title http://www.google.com/pillu/
+ TsunkuBeta@#tsunku > :Error 404 (Not Found)!!1
+ hrna@#tsunku > :sä sait toimii?
+ @TsunkuAlpha > :No text to send
+ hrna@#tsunku > :hoho
+ jaska@#tsunku > ::P
  

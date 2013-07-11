@@ -10,7 +10,7 @@ $config = array(
 				"lgreen"	=> "\033[1;32m",
 				"end"		=> "\033[0m"
 				),
-	"sysmods" 	=> array("get_nick","oper_auth"),#add logger, to enable logging (which is not working) #SYSTEM MODULES, dont touch.
+	"sysmods" 	=> array("get_nick","oper_auth","logger"), #SYSTEM MODULES, dont touch.
 	"config" 	=> array(
 				"host"		=> "b0xi.eu",
 				"port"		=> 6667,
@@ -20,7 +20,8 @@ $config = array(
 				"chans"		=> "#tsunku", #Pilkulla erotettuna kanavan nimet
 				"realname"	=> "tsunku v2",
 				"version"	=> "PHP Tsunku version 0.4.1",
-				"debug"		=> "true" #console debugging true/false
+				"debug"		=> "false", #console debugging true/false
+				"loggin"	=> "false" #logging true/false
 				),
 	"opers" 	=> array("hrna@oper.aquanet.fi", "jaska",), #operaattorit
 	"modules"	=> array("wiki","kurssi","cmd","klo","version","op","programmer","fmi","title") #Place your modules in here.

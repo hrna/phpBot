@@ -36,6 +36,7 @@ function __construct($config)
 	echo "* Sending AUTH to server. => Joining ".$config["color"]["lgreen"].$config["config"]["chans"].$config["color"]["end"]." *\r\n";
 	echo "=> Entering the mainloop =>\r\n";
 	$this->load_modules($config); #Ladataan moduulit
+	echo "Logging is ".$config["color"]["lblue"].$config["config"]["loggin"].$config["color"]["end"]."\r\n";
 	$this->loop($config);
 	}
 
@@ -144,10 +145,13 @@ function loop($config)
 			
 	}
 
-	#Loggeri
+	#Loggeri ##############
 	if($this->expl[1] == "366")
 	{
-		$canlog = true; echo "SET TO ".$canlog."\r\n";
+		if($config["config"]["logging"] == "true") #rivi antaa PHP Notice:  Undefined index: logging fixiä?
+		{
+			$canlog = true;
+		}
 	}
 		
 		
@@ -155,10 +159,10 @@ function loop($config)
 	{	
 		if(in_array("logger", $config["sysmods"]))
 		{
-		sys_logger($this->expl); echo "jou\r\n";
+		sys_logger($this->expl);
 		}
 	}
-	#loggeri end
+	#loggeri end ############
 
 	#loopataan uusiksi
 	
