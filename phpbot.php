@@ -25,6 +25,7 @@ var $socket;
 var $expl = array();
 var $command;
 var $canlog;
+var $hop;
 
 #luo yhteyden ja pitää toimintoja yllä
 function __construct($config)
@@ -96,7 +97,9 @@ function loop($config)
 			{
 				foreach (explode(",", $config["config"]["chans"]) as $chan)
 				{		
+					
 					$this->join_channel($chan);
+					$hop = "true";
 				}
 			} else {
 				while ($this->expl[1] == "433")
@@ -107,12 +110,16 @@ function loop($config)
 				foreach (explode(",", $config["config"]["chans"]) as $chan)
 				{		
 				$this->join_channel($chan);
+				$hop = "true";
 				}
 			} 
-		} else if ($this->expl[1] == "376") {
+		} elseif ($this->expl[1] == "376") {
 			foreach (explode(",", $config["config"]["chans"]) as $chan)
-			{		
-				$this->join_channel($chan);
+			{	
+				if(!isset($hop))
+				{
+					$this->join_channel($chan);
+				}
 			}
 		}
 	}
