@@ -24,6 +24,7 @@ class tsunku {
 var $socket;
 var $expl = array();
 var $command;
+var $canlog;
 
 #luo yhteyden ja pitää toimintoja yllä
 function __construct($config)
@@ -142,6 +143,22 @@ function loop($config)
 			if (isset($command[1]) && $command[1] == "!") { $this->parse_command($command, $config); } # suoritetaan komento 
 			
 	}
+
+	#Loggeri
+	if($this->expl[1] == "366")
+	{
+		$canlog = true; echo "SET TO ".$canlog."\r\n";
+	}
+		
+		
+	if(isset($canlog))
+	{	
+		if(in_array("logger", $config["sysmods"]))
+		{
+		sys_logger($this->expl); echo "jou\r\n";
+		}
+	}
+	#loggeri end
 
 	#loopataan uusiksi
 	
