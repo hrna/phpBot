@@ -24,7 +24,7 @@ if (filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_HOST_REQUIRED) !== false)
  	
  	foreach($html->find('title') as $element)
  	{
-       return "Title: ".trim($element->plaintext);
+       return "~ ".trim($element->plaintext);
 	}
 } 
 }
