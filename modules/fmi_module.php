@@ -2,8 +2,8 @@
 
 function fmi($data) 
 {
+	ini_set("user_agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Firefox/24.0");
 	$saa = ucfirst($data[4]);
-	echo $saa;
 	$dom = new DOMDocument();
 	
 	if (preg_match("/Helsinki/i", $saa) == TRUE)
@@ -30,3 +30,5 @@ function fmi($data)
 		$saa = str_replace(array("\n", "\r"), '', $saa);
 		return $saa;
 }
+
+?>
