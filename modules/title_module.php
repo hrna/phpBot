@@ -3,7 +3,7 @@
 function title($data)
 {
 
-$reg_exp = "@^(http\:\/\/|https\:\/\/)?([a-z0-9][a-z0-9\-]*\.)+[a-z0-9][a-z0-9\-]*$@i";
+#$reg_exp = "@^(http\:\/\/|https\:\/\/)?([a-z0-9][a-z0-9\-]*\.)+[a-z0-9][a-z0-9\-]*$@i";
 
 #tuleeko kanavalta, ei komentona
 if (trim($data[3]) != ":!title") {
@@ -13,8 +13,8 @@ if (trim($data[3]) != ":!title") {
 }
 
 #onko URL oikean muotoinen
-if(preg_match($reg_exp, $url) == TRUE)
-{
+//if(preg_match($reg_exp, $url) == TRUE)
+//{
 
 #lisätään http:// jos ei ole
 if(substr($url, 0, 7) != "http://" && substr($url, 0, 8) != "https://")
@@ -22,7 +22,7 @@ if(substr($url, 0, 7) != "http://" && substr($url, 0, 8) != "https://")
 	$url = "http://".$url;
 }
 
-#tarkastetaan vielä URL
+#tarkastetaan URL
 if (filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_HOST_REQUIRED) !== false)
 {
 	ini_set("user_agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Firefox/24.0");
@@ -39,9 +39,9 @@ if (filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_HOST_REQUIRED) !== false)
 
 } 
 
-} else {
-	return "Invalid URL";
-}
+//} else {
+//	return "Invalid URL";
+//}
 }
 
 

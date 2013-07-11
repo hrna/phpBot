@@ -123,7 +123,7 @@ function loop($config)
 	}
 	
 	#palauttaa urlin titlen
-	if (isset($this->expl[3]) && substr($this->expl[3], 0, 8) == ":http://" || substr($this->expl[3], 0, 9) == ":https://")
+	if (isset($this->expl[3]) && substr($this->expl[3], 0, 8) == ":http://" || isset($this->expl[3]) && substr($this->expl[3], 0, 9) == ":https://")
 	{
 		$this->send_chan(title($this->expl,$config));
 	}
