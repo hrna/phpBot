@@ -19,7 +19,7 @@ $config = array(
 				"ident"		=> "Tsunku2",
 				"chans"		=> "#tsunku", #Pilkulla erotettuna kanavan nimet
 				"realname"	=> "tsunku v2",
-				"version"	=> "PHP Tsunku version 0.4.0",
+				"version"	=> "PHP Tsunku version 0.4.1",
 				"debug"		=> "false" #console debugging true/false
 				),
 	"opers" 	=> array("hrna@oper.aquanet.fi", "jaska",), #operaattorit
