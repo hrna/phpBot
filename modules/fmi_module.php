@@ -3,8 +3,15 @@
 function fmi($data) 
 {
 	$saa = ucfirst($data[4]);
+	echo $saa;
 	$dom = new DOMDocument();
-	@$dom->loadHTMLFile("http://ilmatieteenlaitos.fi/saa/".$data[4]);
+	
+	if (preg_match("/Helsinki/i", $saa) == TRUE)
+	{
+		@$dom->loadHTMLFile("http://ilmatieteenlaitos.fi/saa/".$saa."&station=100971");
+	}else {
+		@$dom->loadHTMLFile("http://ilmatieteenlaitos.fi/saa/".$saa);
+	}
 
 	$xpath = new DOMXPath($dom);
 
