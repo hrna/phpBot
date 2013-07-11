@@ -12,7 +12,7 @@ if(!isset($data[4]))
 	ini_set("user_agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Firefox/24.0");
 	$saa = ucfirst($data[4]);
 	
-		if (searchforCity($saa, $cities_fi) != NULL) # Onko kaupunki olemassa?
+		if (sys_searchforCity($saa, $cities_fi) != NULL) # Onko kaupunki olemassa?
 		{
 			$dom = new DOMDocument();
 	
@@ -44,7 +44,7 @@ if(!isset($data[4]))
 }
 
 #onko kaupunki olemassa
-function searchforCity($city, $array) {
+function sys_searchforCity($city, $array) {
 
    foreach ($array as $key => $val) {
        if ($val['city'] == trim($city)) {
