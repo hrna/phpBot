@@ -72,17 +72,17 @@ function loop($config)
 	{
 		if ($this->expl[1] == "433") #onko nick käytössä? Vedellään niin kauan että löytyy sopiva nick... #Huonoa koodia?
 		{
-			$nick = $this->nick_check("NICK ".$config["config"]["altnick"]);
-			if ($nick != "433")
+			$this->nick_check("NICK ".$config["config"]["altnick"]);
+			if ($this->expl[1] != "433")
 			{
 				foreach (explode(",", $config["config"]["chans"]) as $chan)
 				{		
 					$this->join_channel($chan);
 				}
 			} else {
-				while ($nick == "433")
+				while ($this->expl[1] == "433")
 				{
-					$nick = $this->nick_check("NICK ".$config["config"]["nick"].rand(1,10));
+					$this->nick_check("NICK ".$config["config"]["nick"].rand(1,10));
 					sleep(1);
 				}
 				foreach (explode(",", $config["config"]["chans"]) as $chan)
@@ -143,7 +143,6 @@ function nick_check($tauhka)
 			fwrite($this->socket, $tauhka."\r\n");
 			$line = fgets($this->socket, 256);
 			$this->expl = explode(" ", $line);
-			return $this->expl[1]; echo $this->expl[1];
 	}
 
 #lähettää dataa kanavalle
