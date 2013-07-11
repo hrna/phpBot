@@ -9,7 +9,10 @@ function fmi($data)
 	if (preg_match("/Helsinki/i", $saa) == TRUE)
 	{
 		@$dom->loadHTMLFile("http://ilmatieteenlaitos.fi/saa/".$saa."&station=100971");
-	}else {
+	}else if(preg_match("/Oulu/i", $saa) == TRUE) {
+		@$dom->loadHTMLFile("http://ilmatieteenlaitos.fi/saa/".$saa."&station=101799");
+	}
+	else {
 		@$dom->loadHTMLFile("http://ilmatieteenlaitos.fi/saa/".$saa);
 	}
 
