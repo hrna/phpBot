@@ -23,7 +23,7 @@ $config = array(
 				"debug"		=> "false", #console debugging true/false
 				"logging"	=> "false", #logging true/false
 				),
-	"opers" 	=> array("hrna@oper.aquanet.fi", "jaska",), #operaattorit
+	"opers" 	=> array("hrna@oper.aquanet.fi", "jaska@127.0.0.1",), #operaattorit
 	"modules"	=> array("wiki","kurssi","cmd","klo","version","op","programmer","fmi") #Place your modules in here.
 	);
 
