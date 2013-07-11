@@ -5,9 +5,15 @@ function oper_auth($data, $config)
 		$host = substr($host, 1);
 		#print_r($config["opers"]);
 		#echo $host."\r\n";
-		if (in_array($host, $config["opers"]))
+		
+		$temp = in_array($host, $config["opers"]);
+		echo $temp;
+		if ($temp == 1)
 		{
-			return true;
+			return "Oot oper";
+		} else {
+		
+			return "Et oo oper";
 		}
 	
 	}
