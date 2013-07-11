@@ -128,7 +128,7 @@ function loop($config)
 		$this->send_chan(title($this->expl,$config));
 	}
 	#urlit keskeltä..
-	if (isset($this->expl[3])
+	if (isset($this->expl[3]))
 	{
 		foreach($thix->expl as $value)
 		{
