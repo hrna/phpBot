@@ -132,9 +132,12 @@ function loop($config)
 	}
 	
 	#palauttaa urlin titlen
-	if (isset($this->expl[3]) && substr($this->expl[3], 0, 8) == ":http://" || isset($this->expl[3]) && substr($this->expl[3], 0, 9) == ":https://")
+	if (isset($this->expl[3]) && preg_match('/(http:\/\/[^\s]+)/', $line, $text))
 	{
-		$this->send_chan(title($this->expl,$config));
+		
+		#echo "Täällä ollaan: ".$text[0]."   ".$this->expl[3];
+		#$this->send_chan("Moi: ".$text[0]." ".$this->expl[3]);
+		$this->send_chan(title($text[0],$config));
 	}
 
 	#console debug, asetuksissa true/false
