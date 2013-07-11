@@ -21,7 +21,7 @@ $config = array(
 				"realname"	=> "tsunku v2",
 				"version"	=> "PHP Tsunku version 0.4.1",
 				"debug"		=> "false", #console debugging true/false
-				"loggin"	=> "false" #logging true/false
+				"loggin"	=> "false", #logging true/false
 				),
 	"opers" 	=> array("hrna@oper.aquanet.fi", "jaska",), #operaattorit
 	"modules"	=> array("wiki","kurssi","cmd","klo","version","op","programmer","fmi","title") #Place your modules in here.

@@ -146,9 +146,9 @@ function loop($config)
 	}
 
 	#Loggeri ##############
-	if($this->expl[1] == "366")
-	{
-		if($config["config"]["logging"] == "true") #rivi antaa PHP Notice:  Undefined index: logging fixiä?
+	if(isset($this->expl[1]) && $this->expl[1] == "366")
+	{	
+		if(isset($config["config"]["logging"])) #rivi antaa PHP Notice:  Undefined index: logging fixiä?
 		{
 			$canlog = true;
 		}
@@ -166,7 +166,7 @@ function loop($config)
 
 	#loopataan uusiksi
 	
-	} #<--whileloopin lopetussulku
+	} #<--whileloopin lopetussulku ###################################################################################
 	} 
 
 #lähettää dataa serverille

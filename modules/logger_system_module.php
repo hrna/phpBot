@@ -10,7 +10,7 @@ function sys_logger($data)
 		{
 			$usertxt .= $data[$i]." ";
 		}
-		$parseline = get_nick($data)."@".$data[2]." > ".$usertxt;
+		$parseline = "[".date("H:i:s")."]"." ".get_nick($data)."@".$data[2]." > ".$usertxt;
 
 		$fp = fopen($log, "a");
 		fwrite($fp, $parseline);
