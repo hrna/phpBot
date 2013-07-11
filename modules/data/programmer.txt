@@ -1,20 +1,14 @@
 You immediately complain that this should be subscripted as zero.
 Most people say "Go To Hell," but you tell people to redirect to /dev/null.
 By the time you've gotten here in the document, you've run Tidy or a similar app to check my X/HTML skills.
-Point 3 annoys you, since this document is obviously plaintext without html formatting.
 The statement (0x2b||!0x2b) makes sense to you.
 You find 5 funny.
 You note with disgust that it always evaluates to true, since 0x2b != 0.
-Point 7 disgusts you, because under other languages than C++ (Java, for one), it would throw an exception, runtime error, etc.
-Both points 7 and 8 disgust you, because (0x2b||!0x2b) isn't a statement.
 You wonder why there's so much religious debate.  After all, can't they just type man life?
-Point 10 disgusts you, because your PDP-10 does not have man pages.
 When you think of Blowfish, the stuff described on www.blowfish.com has no relation to what comes to mind.
 You can write formal grammar statements for C, C++, C#, Java, Perl, Python, PHP, HTML, any XML schema, Assembly, Obj-C, QBASIC, XBASIC, OO.o BASIC, StarMath, and just about anything else I could throw at you, and yet the question, "Is our children learning?" raises no red flags.
-You wonder why point 13 is making a reference to John Kerry.
 You quit drinking coffee; caffeine I/Vs are easier.
 Your root@localhost password is the chemical formula for caffeine.
 You didn't know that there was a war in Iraq: too busy preparing for the next gcc compiler release.
 You wrote the GPL.
 You think a "pipe dream" involves bash scripting.
-Point 19 disgusts you, since zsh is so much more powerful.
