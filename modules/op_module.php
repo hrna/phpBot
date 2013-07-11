@@ -9,8 +9,8 @@ function op ($data, $config)
 				$mode = "MODE ".$data[2]." +o ".$data[4]."\r\n";
 				return $mode;
 			} else {
-				$msg = "Usage: !op <nick>";
-				return $msg;	
+				$mode = "MODE ".$data[2]." +o ".get_nick($data);
+				return $mode;	
 			}
 		} else {
 			return get_nick($data).", Ei taida sun natsat riittää :(\r\n"; 

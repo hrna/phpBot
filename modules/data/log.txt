@@ -22,4 +22,37 @@ hrna@#tsunku > :dsa
  @TsunkuAlpha > :No text to send
  hrna@#tsunku > :hoho
  jaska@#tsunku > ::P
+ [23:39:57] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [23:39:58] jaska@#tsunku > :!op
+ [23:40:02] hrna@#tsunku > :ei
+ [23:40:04] hrna@#tsunku > ::D
+ [23:40:08] jaska@#tsunku > :jaska@127.0.0.1
+ [23:40:09] hrna@#tsunku > :!op
+ [23:40:11] hrna@#tsunku > ::P
+ [23:40:22] jaska@#tsunku > :pullasiks
+ [23:40:28] hrna@#tsunku > :mistäs perseest löysit ton
+ [23:40:32] jaska@#tsunku > :jhdfkjd http://www.runkka.us 
+ [23:40:37] jaska@#tsunku > :minkä
+ [23:41:03] hrna@#tsunku > :ton libissä olevan :D
+ [23:41:12] jaska@#tsunku > :stacksieltäforuymilta
+ [23:41:18] jaska@#tsunku > :joku rekommendeeras
+ [23:41:37] hrna@#tsunku > :mis kohtaa edes se on tos titlessä
+ [23:41:37] jaska@#tsunku > :http://simplehtmldom.sourceforge.net/manual.htm
+ [23:41:49] jaska@#tsunku > :require_once("lib/simple_html_dom.php");
+ [23:41:58] jaska@#tsunku > :tohon tosin vois tarkastuksen tehä että onko filuu
+ [23:42:02] hrna@#tsunku > :joo mut niiku just niiku näin http://youtube.com ja sitä sun tätät :D
+ [23:42:20] jaska@#tsunku > :no kato siitä $curl eteen päin
+ [23:42:25] hrna@#tsunku > :meil ei oo yhtää error händläystä eikä mitää muutakaa :D
+ [23:42:31] jaska@#tsunku > :$html eteen päin alkaa sen parserin käuttö
+ [23:42:52] jaska@#tsunku > :ensin curlil haetaan hötömölö sivuilta
+ [23:46:34] @TsunkuAlpha > #tsunku :End of /NAMES list.
+ [23:46:44] hrna@#tsunku > +o TsunkuAlpha
+ [23:46:46] hrna@#tsunku > :!op
+ [23:46:46] TsunkuBeta@#tsunku > :Usage: !op <nick>
+ [23:47:01] hrna@#tsunku > -o hrna
+ [23:47:03] hrna@#tsunku > :!op
+ [23:47:03] TsunkuAlpha@#tsunku > +o hrna
+ [23:47:03] TsunkuBeta@#tsunku > :Usage: !op <nick>
+ [23:47:06] hrna@#tsunku > :noni
+ [23:47:08] hrna@#tsunku > :pussaan ton
  
