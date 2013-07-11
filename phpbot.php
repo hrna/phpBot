@@ -28,7 +28,7 @@ var $command;
 #luo yhteyden ja pitää toimintoja yllä
 function __construct($config)
 	{
-	echo "\r\n".$config["color"]["lblue"]."* ".$config["config"]["versio"].$config["color"]["end"]."\r\n";
+	echo "\r\n".$config["color"]["lblue"]."* ".$config["config"]["version"].$config["color"]["end"]."\r\n";
 	echo "* Initializing the connection... *\r\n\r\n";
 	$this->socket = fsockopen($config["config"]["host"],$config["config"]["port"]);
 	$this->server_auth($config);
