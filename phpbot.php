@@ -180,13 +180,13 @@ function join_channel($chan)
 function parse_command($command, $config) 
 	{
 		$command = substr($command, 2);	
-		if (function_exists($command)) {
+		if (function_exists($command) && substr($command, 0, 4) != "sys_") {
 			$data = ($command($this->expl, $config));
 			if (substr($data, 0, 4 ) === "MODE") ## jos server-komento
 			{
 				$this->send_data($data);
 			}
-			elseif (in_array($command,$config["sysmods"]))
+			elseif (in_array($command,$config["sysmods"]) || substr($command, 0, 4) == "sys_")
 			{
 				#do nothing...
 			}else {
