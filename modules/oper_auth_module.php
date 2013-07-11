@@ -7,13 +7,13 @@ function oper_auth($data, $config)
 		#echo $host."\r\n";
 		
 		$temp = in_array($host, $config["opers"]);
-		echo $temp;
-		if ($temp == 1)
+		#echo $temp;
+		if ($temp == true)
 		{
-			return "Oot oper";
+			return true;
 		} else {
 		
-			return "Et oo oper";
+			return false;
 		}
 	
 	}
