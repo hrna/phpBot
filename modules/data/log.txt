@@ -94,4 +94,101 @@ hrna@#tsunku > :dsa
  [00:03:35] jaska@#tsunku > :laitan 
  [00:03:40] jaska@#tsunku > :~ instead of Title vielä
  [00:03:41] jaska@#tsunku > :hetki
+ [00:04:41] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [00:04:42] jaska@#tsunku > :http://www.anaa.li
+ [00:04:42] @TsunkuBeta > :No text to send
+ [00:04:45] jaska@#tsunku > :joo
+ [00:04:53] jaska@#tsunku > :http://www.pil.lu
+ [00:04:55] jaska@#tsunku > ::D
+ [00:04:59] hrna@#tsunku > ::D:D:D:D
+ [00:05:02] jaska@#tsunku > ::DD
+ [00:05:05] jaska@#tsunku > :reps
+ [00:05:14] hrna@#tsunku > :vittu:D
+ [00:06:14] @ > [00:06:47] jaska@#tsunku > :PHP Notice:  Undefined offset: 2 in /Users/jazka/phpBot/modules/logger_system_module.php on line 13
+ [00:06:49] jaska@#tsunku > :Notice: Undefined offset: 2 in /Users/jazka/phpBot/modules/logger_system_module.php on line 13
+ [00:06:51] jaska@#tsunku > ::P
+ [00:06:54] @ > [00:07:54] @ > [00:08:54] @ > [00:08:59] @ > [00:13:42] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [00:13:46] jaska@#tsunku > :!fmi oulu
+ [00:13:47] jaska@#tsunku > :!fmi helsinki
+ [00:13:52] jaska@#tsunku > :fmi taitaa kusta
+ [00:14:52] @ > [00:15:49] @ > [00:21:07] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [00:21:11] jaska@#tsunku > :!fmi helsinki
+ [00:21:16] jaska@#tsunku > ::D
+ [00:21:48] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [00:21:49] jaska@#tsunku > ::D
+ [00:21:52] jaska@#tsunku > :!fmi helsinki
+ [00:21:55] jaska@#tsunku > :noin
+ [00:22:00] jaska@#tsunku > :eiku vittu
+ [00:22:35] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [00:22:38] jaska@#tsunku > :!fmi helsinki
+ [00:23:17] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [00:23:18] jaska@#tsunku > :!fmi helsinki
+ [00:24:05] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [00:24:07] jaska@#tsunku > :!fmi helsinki
+ [00:25:07] @ > [00:25:50] hrna@#tsunku > :!fmi oulu
+ [00:25:56] hrna@#tsunku > :ppussasik 
+ [00:26:10] jaska@#tsunku > :rikki vielä
+ [00:26:12] jaska@#tsunku > :elä hättäile
+ [00:26:25] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [00:26:27] jaska@#tsunku > :!fmi helsinki
+ [00:26:53] hrna@#tsunku > :eikö se just äske toiminu D:
+ [00:27:15] jaska@#tsunku > :e iku tuli "suomen"
+ [00:27:17] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [00:27:19] jaska@#tsunku > :!fmi helsinki
+ [00:27:29] hrna@#tsunku > :!fmi kuopio
+ [00:27:48] jaska@#tsunku > :eikö pitäski tulla kolme soluu jos
+ [00:27:56] jaska@#tsunku > :explode(" ", "12.7.2013 0:00 Suomen aikaa") 
+ [00:28:08] jaska@#tsunku > :niin vittu laitto 0:00 Suomen  samaan soluun
+ [00:28:19] hrna@#tsunku > :kolme solua, 0 ,1 ,2
+ [00:28:29] jaska@#tsunku > :tai siis 4
+ [00:28:40] hrna@#tsunku > :joo nii
+ [00:28:43] jaska@#tsunku > :mut ei tuu
+ [00:28:45] hrna@#tsunku > ::D
+ [00:28:45] jaska@#tsunku > ::P
+ [00:28:55] hrna@#tsunku > :no pitää elää sit särkinäisellä
+ [00:28:57] hrna@#tsunku > :rikkinäisell'
+ [00:29:00] hrna@#tsunku > :vaähä aikoo
+ [00:29:01] jaska@#tsunku > :no häksäsin sen sit
+ [00:29:07] jaska@#tsunku > :substringasin neljä ekaa siitä sit
+ [00:29:10] jaska@#tsunku > :$temp = explode(" ", $tag->nodeValue);
+ [00:29:11] hrna@#tsunku > ::P
+ [00:29:14] jaska@#tsunku > :    $saa .= " klo ".substr($temp[1], 0, 4).": ";
+ [00:29:17] jaska@#tsunku > ::P
+ [00:29:19] jaska@#tsunku > :toimii
+ [00:29:21] hrna@#tsunku > :toimaakooooos
+ [00:29:27] jaska@#tsunku > :paitsi
+ [00:29:28] hrna@#tsunku > :pushaa ni pullaan ja pistän online
+ [00:29:33] jaska@#tsunku > :ku tulee 13:10 nii ei toimi enää
+ [00:29:34] @ > [00:29:35] jaska@#tsunku > :jää viimenen numero pois
+ [00:29:37] jaska@#tsunku > ::D
+ [00:29:41] hrna@#tsunku > :no en sit :D
+ [00:29:44] jaska@#tsunku > :no laitan 0, 5
+ [00:29:49] hrna@#tsunku > :pitää filee pugi?
+ [00:29:52] jaska@#tsunku > :tulee whitespace mut ei haittaa
+ [00:29:57] jaska@#tsunku > :koska väli pitää olla muutenki
+ [00:30:38] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [00:30:46] jaska@#tsunku > :!fmi helsinki
+ [00:30:50] jaska@#tsunku > :hurh
+ [00:30:53] jaska@#tsunku > :ei si
+ [00:30:59] hrna@#tsunku > ::D
+ [00:31:10] hrna@#tsunku > :no pitää filee bugi ja korjail sit :P
+ [00:31:14] jaska@#tsunku > :no hetki
+ [00:31:18] jaska@#tsunku > :poistan loppupäästä
+ [00:31:38] hrna@#tsunku > ::D
+ [00:32:38] @ > [00:32:43] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [00:32:46] jaska@#tsunku > :!fmi helsinki
+ [00:33:37] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [00:33:39] jaska@#tsunku > :hiton fmi ku ei laita 00:20
+ [00:33:42] jaska@#tsunku > :!fmi helsinki
+ [00:33:57] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [00:33:59] jaska@#tsunku > :!fmi helsinki
+ [00:34:10] jaska@#tsunku > :eli ei kärsi substringaa whitespacee
+ [00:34:50] hrna@#tsunku > :eli päivällä toimii, yöllä ei :D
+ [00:35:26] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [00:35:27] jaska@#tsunku > :!fmi helsinki
+ [00:35:30] jaska@#tsunku > :eikö se oo nyt hyvä
+ [00:35:36] jaska@#tsunku > :vaikka onki klo 0:20 : 
+ [00:35:43] jaska@#tsunku > :eikä klo 0:20:
+ [00:35:50] hrna@#tsunku > :joo iha jees
+ [00:36:16] jaska@#tsunku > :pushaan ton
  

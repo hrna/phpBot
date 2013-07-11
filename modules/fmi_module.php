@@ -29,7 +29,8 @@ if(!isset($data[4]))
 			$xpath = new DOMXPath($dom);
 
 			foreach ($xpath->query('//span[@class="time-stamp"]') as $tag) {
-    			$saa .= " klo ".substr($tag->nodeValue,10,5).": ";
+				$temp = explode(" ", $tag->nodeValue);
+    			$saa .= " klo ".substr($temp[1], 0, -6).": ";
 			}
 
 			foreach ($xpath->query('//span[contains(@class,"parameter-name-value")]') as $tag) {
