@@ -26,6 +26,8 @@ var $expl = array();
 var $command;
 var $canlog;
 var $hop;
+var $count = 0;
+var $time;
 
 #luo yhteyden ja pitää toimintoja yllä
 function __construct($config)
@@ -38,6 +40,7 @@ function __construct($config)
 	echo "=> Entering the mainloop =>\r\n";
 	$this->load_modules($config); #Ladataan moduulit
 	echo "Logging is ".$config["color"]["lblue"].$config["config"]["logging"].$config["color"]["end"]."\r\n";
+	$time = time();
 	$this->loop($config);
 	}
 
@@ -80,14 +83,15 @@ function load_modules($config)
 
 function loop($config)
 	{
-	
+
    	while(!feof($this->socket)) { #oistaiseksi käytössä, kunnes todetaan toimimattomaksi...
 
 	#tuleva data palvelimelta ja pilkonta osiin
 	$line = fgets($this->socket, 256);
 	flush();
 	$this->expl = explode(" ", $line);
-	
+
+
 	if (isset($this->expl[1]))
 	{
 		if ($this->expl[1] == "433") #onko nick käytössä? Vedellään niin kauan että löytyy sopiva nick... #Huonoa koodia?
@@ -149,13 +153,32 @@ function loop($config)
 	{
 		echo $line;
 	}
+
 	
+	#Antiflood
+	if ((time() - $time) >= 35) {
+		$count = 0;
+    	$time = time();
+    }
+
+
 	#botin komennot alla
 	if (isset($this->expl[3]))
 	{
 		$command = str_replace(array(chr(10), chr(13)), '', $this->expl[3]);
 		
-			if (isset($command[1]) && $command[1] == "!") { $this->parse_command($command, $config); } # suoritetaan komento 
+			if (isset($command[1]) && $command[1] == "!") 
+			{ 
+				
+				$count = $count+1;
+				
+				if ($count > 3) {
+					echo "FLOODING!\r\n";
+				}
+				else {
+					$this->parse_command($command, $config); # suoritetaan komento 
+				}
+			} 
 			
 			/*if (isset($command) && $command == ":!rehash") {
 			
@@ -168,6 +191,8 @@ function loop($config)
 			} We could make a rehash function for the opers, but how to do it? Can't redeclare functions...
 			*/
 	}
+	
+	
 
 	#Loggeri ##############
 	if(isset($this->expl[1]) && $this->expl[1] == "366")
@@ -230,6 +255,7 @@ function join_channel($chan)
 #Suoritetaan toiminto jos olemassa
 function parse_command($command, $config) 
 	{
+
 		$command = substr($command, 2);	
 		if (function_exists($command) && substr($command, 0, 4) != "sys_") {
 			$data = ($command($this->expl, $config));
