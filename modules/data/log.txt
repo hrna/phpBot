@@ -191,4 +191,42 @@ hrna@#tsunku > :dsa
  [00:35:43] jaska@#tsunku > :eikä klo 0:20:
  [00:35:50] hrna@#tsunku > :joo iha jees
  [00:36:16] jaska@#tsunku > :pushaan ton
+ [10:20:58] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [10:21:02] jaska@#tsunku > :http://fortawesome.github.io/Font-Awesome/examples/
+ [10:22:04] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [10:22:06] jaska@#tsunku > :http://fortawesome.github.io/Font-Awesome/examples/
+ [10:22:17] jaska@#tsunku > :http://fortawesome.github.io/Font
+ [10:22:21] jaska@#tsunku > :katkee tohoh - urlissa
+ [10:23:04] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [10:23:06] jaska@#tsunku > :http://fortawesome.github.io/Font-Awesome/examples/
+ [10:23:12] jaska@#tsunku > ::D
+ [10:23:25] jaska@#tsunku > :vittu ku ei tajuu noita regexejä kauhee arpominen
+ [10:23:30] jaska@#tsunku > :pitäaa opiskella niitä
+ [10:24:53] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [10:24:56] jaska@#tsunku > :http://fortawesome.github.io/Font-Awesome/examples/
+ [10:25:01] jaska@#tsunku > ::)
+ [10:25:10] jaska@#tsunku > :http://fortawesome.github.io
+ [10:25:24] jaska@#tsunku > :http://stackoverflow.com/questions/833469/regular-expression-for-url
+ [10:25:34] jaska@#tsunku > :http://pornbay.org/user.php
+ [10:25:37] jaska@#tsunku > :nyt näyttäs toimivan
+ [10:25:56] jaska@#tsunku > :http://forum.serviio.org/viewtopic.php?f=5&t=11027&sid=9cfb5a1e6a0983a5e51a8159002ad490&start=20
+ [10:26:00] jaska@#tsunku > :tai ei
+ [10:26:03] jaska@#tsunku > ::P
+ [10:26:53] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [10:26:56] jaska@#tsunku > :http://forum.serviio.org/viewtopic.php?f=5&t=11027&sid=9cfb5a1e6a0983a5e51a8159002ad490&start=20
+ [10:27:08] jaska@#tsunku > :mikä vitun &bull;
+ [10:27:19] jaska@#tsunku > :pitäs vissii jollai entitiesillä ajaa
+ [10:28:10] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [10:28:13] jaska@#tsunku > :http://forum.serviio.org/viewtopic.php?f=5&t=11027&sid=9cfb5a1e6a0983a5e51a8159002ad490&start=20
+ [10:28:16] jaska@#tsunku > ::P
+ [10:31:20] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [10:31:23] jaska@#tsunku > :http://forum.serviio.org/viewtopic.php?f=5&t=11027&sid=9cfb5a1e6a0983a5e51a8159002ad490&start=20
+ [10:31:26] jaska@#tsunku > :uuh
+ [10:31:37] jaska@#tsunku > :http://fortawesome.github.io/Font-Awesome/examples/
+ [10:31:42] jaska@#tsunku > :http://fortawesome.github.io/Font-Awesome/
+ [10:31:45] jaska@#tsunku > :http://fortawesome.github.io/Font-Aw
+ [10:31:53] jaska@#tsunku > :nyt on yvä
+ [10:31:55] jaska@#tsunku > :hyvä
+ [10:31:59] jaska@#tsunku > : $title = html_entity_decode($title, ENT_COMPAT, 'UTF-8');
+ [10:32:01] jaska@#tsunku > :tolla ratkes
  

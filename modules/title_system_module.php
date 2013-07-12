@@ -6,7 +6,7 @@ function sys_title($data)
 require_once("lib/simple_html_dom.php");
 
 $url = $data;
-
+echo $url;
 #tarkastetaan URL
 if (filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_HOST_REQUIRED) !== false)
 {
@@ -24,7 +24,9 @@ if (filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_HOST_REQUIRED) !== false)
  	
  	foreach($html->find('title') as $element)
  	{
-       return "~ ".trim($element->plaintext);
+ 		$title = trim($element->plaintext);
+ 		$title = html_entity_decode($title, ENT_COMPAT, 'UTF-8');
+ 		return "~ ".$title;
 	}
 } 
 }

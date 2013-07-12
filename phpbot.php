@@ -132,7 +132,7 @@ function loop($config)
 	}
 	
 	#palauttaa urlin titlen
-	if (isset($this->expl[3]) && preg_match('!(http)(s)?:\/\/[a-zA-Z0-9.?&_/]+!', $line, $text))
+	if (isset($this->expl[3]) && preg_match('!(http)(s)?:\/\/[a-zA-Z0-9\-\=.?&_/]+!', $line, $text))
 	{
 		
 		#echo "Täällä ollaan: ".$text[0]."   ".$this->expl[3];
