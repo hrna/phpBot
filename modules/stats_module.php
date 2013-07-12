@@ -1,5 +1,5 @@
 <?
-
+#SimpleStats
 function stats($data)
 	{	
 		if(isset($data[4]))

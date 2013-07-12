@@ -34,7 +34,7 @@ $config = array(
 				"programmer",
 				"fmi",
 				"clock",
-				"SimpleStats"
+				"stats"
 				) 
 	);
 
