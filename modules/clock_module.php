@@ -1,0 +1,9 @@
+<?
+
+function clock($data, $config) {
+
+
+
+}
+
+?>
