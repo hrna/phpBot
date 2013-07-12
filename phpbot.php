@@ -136,9 +136,10 @@ function loop($config)
 	{
 		if (in_array("title",$config["sysmods"]))
 		{
-			if(sys_title($text[0],$config) != null)
+			$title = sys_title($text[0],$config);
+			if($title != null)
 			{
-				$this->send_chan(sys_title($text[0],$config));
+				$this->send_chan($title);
 			}
 		}
 	}
@@ -224,7 +225,7 @@ function parse_command($command, $config)
 			$data = ($command($this->expl, $config));
 			if (substr($data, 0, 4 ) === "MODE") ## jos server-komento
 			{
-				$this->send_data($data);echo "jee";
+				$this->send_data($data);
 			}
 			elseif (in_array($command,$config["sysmods"]) || substr($command, 0, 4) == "sys_")
 			{
