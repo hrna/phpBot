@@ -60,7 +60,7 @@ function load_modules($config)
 			if (is_file("modules/".$mod."_system_module.php"))
 			{
 				echo "Loading module: ".$config["color"]["lgreen"].$mod.$config["color"]["end"]."\r\n";
-				include("modules/".$mod."_system_module.php");
+				include_once("modules/".$mod."_system_module.php");
 			} else { 
 				echo $config["color"]["lred"].$mod." module is not available\r\n".$config["color"]["end"]; 
 			}
@@ -71,7 +71,7 @@ function load_modules($config)
 			if (is_file("modules/".$mod."_module.php"))
 			{
 				echo "Loading module: ".$config["color"]["lgreen"].$mod.$config["color"]["end"]."\r\n";
-				include("modules/".$mod."_module.php");
+				include_once("modules/".$mod."_module.php");
 			} else { 
 				echo $config["color"]["lred"].$mod." module is not available\r\n".$config["color"]["end"]; 
 			}
@@ -157,6 +157,16 @@ function loop($config)
 		
 			if (isset($command[1]) && $command[1] == "!") { $this->parse_command($command, $config); } # suoritetaan komento 
 			
+			/*if (isset($command) && $command == ":!rehash") {
+			
+				if (oper_auth($this->expl,$config)) {
+				
+					$this->load_modules($config);
+				
+				}
+			
+			} We could make a rehash function for the opers, but how to do it? Can't redeclare functions...
+			*/
 	}
 
 	#Loggeri ##############
