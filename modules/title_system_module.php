@@ -1,12 +1,17 @@
 <?
 
-function sys_title($data)
+function sys_title($data, $config)
 {
 
 require_once("lib/simple_html_dom.php");
 
 $url = $data;
-echo $url;
+
+if ($config["config"]["debug"] == "true")
+{
+	echo $url;
+}
+
 #tarkastetaan URL
 if (filter_var($url, FILTER_VALIDATE_URL, FILTER_FLAG_HOST_REQUIRED) !== false)
 {

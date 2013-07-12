@@ -229,4 +229,12 @@ hrna@#tsunku > :dsa
  [10:31:55] jaska@#tsunku > :hyvä
  [10:31:59] jaska@#tsunku > : $title = html_entity_decode($title, ENT_COMPAT, 'UTF-8');
  [10:32:01] jaska@#tsunku > :tolla ratkes
+ [10:35:51] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [10:36:02] jaska@#tsunku > :http://www.pil.lu
+ [10:36:33] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [10:36:35] jaska@#tsunku > :http://www.pil.lu
+ [10:36:45] jaska@#tsunku > :hrna: tän takia $config on kans hyvä passata parametrina
+ [10:36:54] jaska@#tsunku > :voi tehä moduuliin tämmösen ehdon
+ [10:36:56] jaska@#tsunku > :if ($config["config"]["debug"] == "true")
+ [10:36:58] jaska@#tsunku > :{
  
