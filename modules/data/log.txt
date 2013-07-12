@@ -237,4 +237,6 @@ hrna@#tsunku > :dsa
  [10:36:54] jaska@#tsunku > :voi tehä moduuliin tämmösen ehdon
  [10:36:56] jaska@#tsunku > :if ($config["config"]["debug"] == "true")
  [10:36:58] jaska@#tsunku > :{
+ [10:46:12] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [10:46:42] jaska@#tsunku > :pillu
  
