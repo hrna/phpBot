@@ -239,4 +239,6 @@ hrna@#tsunku > :dsa
  [10:36:58] jaska@#tsunku > :{
  [10:46:12] @TsunkuBeta > #tsunku :End of /NAMES list.
  [10:46:42] jaska@#tsunku > :pillu
+ [10:53:56] @TsunkuBeta > #tsunku :End of /NAMES list.
+ [10:53:58] jaska@#tsunku > :pöö
  

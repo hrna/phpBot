@@ -158,7 +158,7 @@ function loop($config)
 	#Loggeri ##############
 	if(isset($this->expl[1]) && $this->expl[1] == "366")
 	{	
-		if($config["config"]["logging"] == "true") #rivi antaa PHP Notice:  Undefined index: logging fixiä?
+		if($config["config"]["logging"] == "true")
 		{
 			$canlog = true;
 		}
