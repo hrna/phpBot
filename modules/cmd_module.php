@@ -2,6 +2,7 @@
 
 function cmd($data, $config) 
 {
+	$komennot = "";
 	foreach ($config["modules"] as $mod)
 	{
 		if ($mod != "get_nick")
