@@ -134,7 +134,13 @@ function loop($config)
 	#palauttaa urlin titlen
 	if (isset($this->expl[3]) && $this->expl[1] != "372" && preg_match('!(http)(s)?:\/\/[a-zA-Z0-9\-\=.?&_/]+!', $line, $text))
 	{
-		$this->send_chan(sys_title($text[0],$config));
+		if (in_array("title",$config["sysmods"]))
+		{
+			if(sys_title($text[0],$config) != null)
+			{
+				$this->send_chan(sys_title($text[0],$config));
+			}
+		}
 	}
 
 	#console debug, asetuksissa true/false
@@ -218,13 +224,13 @@ function parse_command($command, $config)
 			$data = ($command($this->expl, $config));
 			if (substr($data, 0, 4 ) === "MODE") ## jos server-komento
 			{
-				$this->send_data($data);
+				$this->send_data($data);echo "jee";
 			}
 			elseif (in_array($command,$config["sysmods"]) || substr($command, 0, 4) == "sys_")
 			{
 				#do nothing...
 			}else {
-				$this->send_chan($data);
+				$this->send_chan($data); 
 			}
 		}		 
 		if (!function_exists($command))

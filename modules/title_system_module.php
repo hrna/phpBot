@@ -38,7 +38,7 @@ if (preg_match('/\.(jpg|jpeg|png|gif|pdf|exe|zip)(?:[\?\#].*)?$/i', $url) !== tr
  		return "~ ".$title;
 	}
 	}
-} 
+} else { return null; }
 }
 
 ?>
