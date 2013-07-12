@@ -57,10 +57,10 @@ function load_modules($config)
 		echo $config["color"]["lblue"]."LOADING SYSTEM MODULES\r\n".$config["color"]["end"];
 		foreach ($config["sysmods"] as $mod)
 		{
-			if (is_file("modules/".$mod."_system_module.php"))
+			if (is_file("modules/system/".$mod."_system_module.php"))
 			{
 				echo "Loading module: ".$config["color"]["lgreen"].$mod.$config["color"]["end"]."\r\n";
-				include_once("modules/".$mod."_system_module.php");
+				include_once("modules/system/".$mod."_system_module.php");
 			} else { 
 				echo $config["color"]["lred"].$mod." module is not available\r\n".$config["color"]["end"]; 
 			}
