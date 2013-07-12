@@ -5,7 +5,7 @@ function stats($data)
 		if(isset($data[4]))
 		{
 			$nick = trim($data[4]);
-			$counts = "0";
+			$counts = "";
 			$log = "modules/data/log.txt";
 			if (file_exists($log))
 			{
@@ -28,10 +28,16 @@ function stats($data)
 				 	}
 				}
 			} 
-			return $nick." has written ".$counts." lines";
-			#echo $nick." has written ".$counts." lines\r\n";
-			
-		}
+			if($counts != "")
+			{
+				return $nick." has written ".$counts." lines";
+			} 
+			else 
+			{
+				return "I dont remember ".$nick." being active on this channel";
+			}
+		} else { return "Usage: !stats <nick>"; }
+		
 	}
 
 
