@@ -6,7 +6,7 @@ function stats($data)
 		{
 			$nick = trim($data[4]);
 			$counts = "";
-			$log = "modules/data/log.txt";
+			$log = "logs/logger.log";
 			if (file_exists($log))
 			{
 				$fh = fopen($log, "r");

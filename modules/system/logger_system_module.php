@@ -3,7 +3,7 @@
 
 function sys_logger($data)
 	{
-		$log = "modules/data/log.txt";		
+		$log = "logs/logger.log";		
 		$nums = count($data);
 		$usertxt = "";
 		for ($i = 3; $i < $nums; $i++)
