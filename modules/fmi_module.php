@@ -11,7 +11,7 @@ $user_city = sys_getuserCity(get_nick($data));
 
 if(!isset($data[4]) && $user_city == null)
 {
-	return "Usage: !fmi city - !fmi set city";
+	return "Usage: !fmi <city> - !fmi set <city>";
 } else {
 
 	include("data/cities_fi.php");
