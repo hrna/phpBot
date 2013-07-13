@@ -16,7 +16,7 @@ if(!isset($data[4]) && $user_city == null)
 
 	include("data/cities_fi.php");
 	
-	ini_set("user_agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Firefox/24.0");
+	ini_set("user_agent","Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)");
 	
 	if ($user_city == null || isset($data[4]) && $data[4] != $user_city) { $saa = ucfirst($data[4]); } else { $saa = $user_city; }
 	

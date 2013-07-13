@@ -9,14 +9,14 @@ require_once("lib/simple_html_dom.php");
 	if(!isset($data[4])) {
 		return "World Clock - Usage: !clock <city>";
 	}
-	$city = $data[4];
+	$city = ucfirst($data[4]);
 	if(isset($data[5])) { $city .= " ".$data[5]; }
 	if(isset($data[6])) { $city .= " ".$data[6]; }
 
 	$url = "http://dateandtime.info/citysearch.php?city=".$city;
 
  	$curl = curl_init(); 
- 	curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Firefox/24.0");
+ 	curl_setopt($curl, CURLOPT_USERAGENT, "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)");
 	curl_setopt($curl, CURLOPT_URL, $url);  
 	curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);  
 	curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 10);  
@@ -38,7 +38,7 @@ require_once("lib/simple_html_dom.php");
  		$temp2 = substr_replace($temp," ",11,0);
  		$temp2 = substr($temp, 0, -6); 
  		$time = date("l H:i", strtotime($temp2));
- 		return trim($city)." time: ".$time;
+ 		return "Time in ".trim($city).": ".$time;
 	}
 
 }

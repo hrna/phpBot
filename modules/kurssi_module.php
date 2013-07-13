@@ -4,7 +4,7 @@ function kurssi($data)
 	{
 	if (is_numeric($data[4]) && isset($data[4]) && isset($data[5]) && isset($data[6]))
 	{
-		ini_set("user_agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:24.0) Gecko/20100101 Firefox/24.0");	
+		ini_set("user_agent","Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)");	
 		$amount = $data[4];			
 		$from = $data[5];
 		$to = $data[6];

@@ -18,7 +18,6 @@ echo "*                         *\r\n";
 echo "***************************\r\n";
 /** BOT CFG ABOWE **/
 
-
 class tsunku {
 
 var $socket;
@@ -53,7 +52,6 @@ function server_auth($config)
 	echo $config["color"]["lgreen"]."* AUTH OK *\r\n\r\n".$config["color"]["end"];
 	}
 	
-
 #Ladataan moduulit, mitenhän tämän tekis?
 function load_modules($config)
 	{
@@ -127,8 +125,7 @@ function loop($config)
 			}
 		}
 	}
-		
-	
+			
 	#vastaa palvelimen pingiin
 	if ($this->expl[0] == "PING")
 	{
@@ -179,20 +176,8 @@ function loop($config)
 					$this->parse_command($command, $config); # suoritetaan komento 
 				}
 			} 
-			
-			/*if (isset($command) && $command == ":!rehash") {
-			
-				if (oper_auth($this->expl,$config)) {
-				
-					$this->load_modules($config);
-				
-				}
-			
-			} We could make a rehash function for the opers, but how to do it? Can't redeclare functions...
-			*/
 	}
-	
-	
+		
 
 	#Loggeri ##############
 	if(isset($this->expl[1]) && $this->expl[1] == "366")
