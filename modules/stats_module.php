@@ -4,38 +4,48 @@ function stats($data)
 	{	
 		if(isset($data[4]))
 		{
-			$nick = trim($data[4]);
-			$counts = "";
-			$log = "logs/logger.log";
-			if (file_exists($log))
+			$channel = trim($data[2]);
+			$hashtag = strpos($channel,"#");
+			if ($hashtag == 1)
 			{
-				$fh = fopen($log, "r");
-				while (!feof($fh)) 
+				$channel = substr($channel,1);
+			}
+			if (strpos($channel,"#") == 0)
+			{
+				$log = "logs/". $channel.".log";	
+				$nick = trim($data[4]);
+				$counts = "";
+					
+				if (file_exists($log))
 				{
-					$line = fgets($fh);
-					$parts = explode(" ", $line);
-					if(isset($parts[2]))
+					$fh = fopen($log, "r");
+					while (!feof($fh)) 
 					{
-						$name = strstr($parts[2], "@", true); 
-						if (trim($name) == $nick)
+						$line = fgets($fh);
+						$parts = explode(" ", $line);print_r($parts);
+						if(isset($parts[2]))
 						{
-							$counts = $counts+1;
+							$name = strstr($parts[2], "@", true); 
+							if (trim($name) == $nick)
+							{
+								$counts = $counts+1;
+							}
+						} else {  }
+						if ($line === false) 
+						{
+							#some error handling ?
 						}
 					}
-					if ($line === false) 
-					{
-						#some error handling ?
-				 	}
+				} 
+				if($counts != "")
+				{
+					return $nick." has written ".$counts." lines";
+				} 
+				else 
+				{
+					return "I dont remember ".$nick." being active on this channel";
 				}
-			} 
-			if($counts != "")
-			{
-				return $nick." has written ".$counts." lines";
-			} 
-			else 
-			{
-				return "I dont remember ".$nick." being active on this channel";
-			}
+			 }
 		} else { return "Usage: !stats <nick>"; }
 		
 	}

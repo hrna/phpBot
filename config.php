@@ -17,11 +17,11 @@ $config = array(
 				"nick"		=> "TsunkuBeta",
 				"altnick"	=> "TsunkuAlpha", 
 				"ident"		=> "Tsunku2",
-				"chans"		=> "#tsunku", #Pilkulla erotettuna kanavan nimet
+				"chans"		=> "#tsunku,#tsunku2", #Pilkulla erotettuna kanavan nimet
 				"realname"	=> "tsunku v2",
 				"version"	=> "PHP Tsunku version 0.4.4",
 				"debug"		=> "false", #console debugging true/false
-				"logging"	=> "false", #logging true/false
+				"logging"	=> "true", #logging true/false
 				),
 	"opers" 	=> array("hrna@oper.aquanet.fi", "jaska@127.0.0.1",), #operaattorit
 	"modules"	=> array(	#Place your modules below here.

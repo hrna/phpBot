@@ -3,20 +3,32 @@
 
 function sys_logger($data)
 	{
-		$log = "logs/logger.log";		
-		$nums = count($data);
-		$usertxt = "";
-		if(trim(get_nick($data)) != null)
+		$channel = trim($data[2]);
+		$hashtag = strpos($channel,"#");
+		if ($hashtag == 1)
 		{
-			for ($i = 3; $i < $nums; $i++)
+			$channel = substr($channel,1);
+		}
+		if (strpos($channel,"#") == 0)
+		{
+			$log = "logs/". $channel.".log";		
+			$nums = count($data);
+			$usertxt = "";
+			if(trim(get_nick($data)) != null)
 			{
-				$usertxt .= $data[$i]." ";
-			}
-			$parseline = "[".date("H:i:s")."]"." ".get_nick($data)."@".$data[2]." > ".$usertxt;
+				for ($i = 3; $i < $nums; $i++)
+				{
+					$usertxt .= $data[$i]." ";
+				}
+				if ($usertxt != " " or $usertxt != "")
+				{
+					$parseline = "[".date("H:i:s")."]"." ".get_nick($data)."@".$channel." > ".trim($usertxt)."\n";
 
-			$fp = fopen($log, "a");
-			fwrite($fp, $parseline);
-			fclose($fp);
+					$fp = fopen($log, "a");
+					fwrite($fp, $parseline);
+					fclose($fp);
+				}
+			}
 		}
 
 	}
