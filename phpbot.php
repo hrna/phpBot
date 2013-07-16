@@ -129,7 +129,7 @@ function loop($config)
 	#vastaa palvelimen pingiin
 	if ($this->expl[0] == "PING")
 	{
-		$this->send_data("PONG", $this->expl[1]); 
+		$this->send_data(date("H:M:I")." PONG", $this->expl[1]); 
 	}
 	
 	#palauttaa urlin titlen
