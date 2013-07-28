@@ -1,1 +1,1 @@
-Working on porting the bot in python, current development is low right now.
+Current development has been stopped due importing bot into python3
